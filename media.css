@@ -1,4 +1,4 @@
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
     .navbar{
         padding-left: 10rem !important;
         padding-right: 10rem !important;
@@ -14,5 +14,26 @@
     }
     #team .card{
         min-height: 840px;
+    }
+    .ht-350px{
+        height: 350px;
+    }
+}
+@media (max-width:768.99px) {
+    .mobile-css{
+        text-align: center;
+    }
+    .square-img{
+        text-align: center;
+    }
+    .col-sm-0{
+        width: 0;
+        height: 0;
+    }
+    .mobile-mb-2{
+        margin-bottom: 2rem;
+    }
+    .mobile-center{
+        text-align: center;
     }
 }
