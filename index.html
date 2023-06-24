@@ -47,10 +47,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./company-profile.html">Company Profile</a>
+              <a class="nav-link" href="./company-profile/">Company Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./services.html">Services</a>
+              <a class="nav-link" href="./services/">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/">Free Quote</a>
@@ -62,7 +62,7 @@
               <a class="nav-link" href="/">Why Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./contact-us.html">Contact</a>
+              <a class="nav-link" href="./contact-us/">Contact</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/">Languages</a>
@@ -162,12 +162,12 @@
         <h1 class="text-center">Our Advantages</h1>
         <p class="text-center">Professional service, quality guarantee.</p>
         <div class="row mb-5rem">
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="row">
               <div class="col-md-6 mt-10">
                 <img src="./imgs/fydi_advantage1.png" alt="fydi advantage" class="img-fit">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 mobile-css">
                 <h5>
                   Strict Information Security
                 Management System
@@ -187,12 +187,12 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="row">
               <div class="col-md-6 mt-10">
                 <img src="./imgs/fydi_advantage2.png" alt="fydi advantage" class="img-fit">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 mobile-css">
                 <h5>
                   Powerful Workplace Security
                 And Operational Sustainability Guarantee
@@ -212,12 +212,12 @@
           </div>
         </div>
         <div class="row mb-5rem">
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="row">
               <div class="col-md-6 mt-10">
                 <img src="./imgs/fydi_advantage3.png" alt="fydi advantage" class="img-fit">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 mobile-css">
                 <h5>
                   Strong Recruitment 
                 Management Ability
@@ -236,12 +236,12 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="row">
               <div class="col-md-6 mt-10">
                 <img src="./imgs/fydi_advantage4.png" alt="fydi advantage" class="img-fit">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 mobile-css">
                 <h5>
                   Matured Personnel 
                   Training System
@@ -264,35 +264,34 @@
           </div>
         </div>
         <div class="row mb-5rem">
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="row">
               <div class="col-md-6 mt-10">
                 <img src="./imgs/fydi_advantage5.png" alt="fydi advantage" class="img-fit">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 mobile-css">
                 <h5>
-                  Self-Developed Operation 
-Management System
+                  Self-Developed Operation Management System
                 </h5>
                 <p>
                   Self-developed alarm system for 
-performance, type setting and achievement 
-rate of process indicators, to improve 
-management efficiency, and standardized 
-follow-up mechanism to monitor 
-staff workflow and operation 
-practice in a real time.
+                  performance, type setting and achievement 
+                  rate of process indicators, to improve 
+                  management efficiency, and standardized 
+                  follow-up mechanism to monitor 
+                  staff workflow and operation 
+                  practice in a real time.
                 </p>
                 <button class="btn btn-outline-primary">Online Consults</button>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="row">
               <div class="col-md-6 mt-10">
                 <img src="./imgs/fydi_advantage6.png" alt="fydi advantage" class="img-fit">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 mobile-css">
                 <h5>
                   Complete Quality Control 
                   Management System
@@ -341,7 +340,7 @@ practice in a real time.
             <ul class="footer-ul">
               <li class="footer-li">
                 <i class="bi bi-geo-alt-fill"></i>  &nbsp;
-                17592 E 17th St, Suite 250,
+                17592 E 17th St, Suite 250
                 <br>
                 &nbsp;  &nbsp; &nbsp;  &nbsp;Tustin, CA 92780 USA
               </li>
@@ -380,13 +379,13 @@ practice in a real time.
                 <a href="/">Home</a>
               </li>
               <li class="footer-li">
-                <a href="./company-profile.html">Company Profile</a>
+                <a href="./company-profile/">Company Profile</a>
               </li>
               <li class="footer-li">
-                <a href="/services.html">Services</a>
+                <a href="/services/">Services</a>
               </li>
               <li class="footer-li">
-                <a href="/contact-us.html">Contact</a>
+                <a href="/contact-us/">Contact</a>
               </li>
             </ul>
           </div>
@@ -398,5 +397,14 @@ practice in a real time.
         </p>
       </div>
     </footer>
+
+    <script>
+      // collapse menu when click outside 
+      $(document).on('click', function (e) {
+        if ($(e.target).closest('.navbar').length === 0) {
+          $('.navbar-collapse').collapse('hide');
+        }
+      });
+    </script>
   </body>
 </html>
