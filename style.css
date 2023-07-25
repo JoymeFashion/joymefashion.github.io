@@ -212,6 +212,9 @@ section{
 #contact-form{
     background-color: var(--pr-bg-color);
 }
+#customer-services .ad-ul i, #debt-collect-ad .ad-ul i{
+    color: var(--primary-color);
+}
 @media screen and (min-width: 960px) {
     #hero{
         min-height: 500px;
