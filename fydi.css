@@ -1,6 +1,9 @@
 body{
     font-family: Montserrat-Light !important;
 }
+h1{
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 .carousel-item{
     width: 582px;
 }
@@ -10,21 +13,21 @@ body{
     height: 100%;
 }
 .navbar{
-    background:  linear-gradient(90deg, #0800FF, #00FFF0);
+    /* background:   #0800FF; */
 }
 .nav-link{
-    color: white !important;
+    /* color: white !important; */
 }
 .btn-round{
     border-radius: 40% ;
 }
 #hero{
-    height: 732px;
-    background: url(./imgs/fydi_section1_banner.png) no-repeat 100%;
+    /* height: 732px; */
+    /* background: url(./imgs/fydi_section1_banner.png) no-repeat 100%; */
     background-size: 100% 100%;
 }
 #hero p, #hero h1{
-    color: white;
+    /* color: white; */
 }
 .fydi_highlight{
     margin-top: 2rem; 
@@ -151,10 +154,10 @@ footer{
 /* icon  */
 .contact-icon{
     font-size: 32px;
-    color: blue;
+    /* color: blue; */
 }
 /* subtitle */
 .contact-subtitle{
-    color: #0800FF;
+    /* color: #0800FF; */
     font-weight: 300;
 }

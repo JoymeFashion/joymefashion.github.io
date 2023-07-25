@@ -1,0 +1,248 @@
+:root{
+    --primary-color: #4285f4;
+    --light-grey-text-color: rgb(101, 100, 100);
+    --pr-bg-color: #f8f9fa;
+    --light-green-color: rgb(99, 171, 99);
+}
+/* default section padding  */
+section{
+    padding: 50px;
+}
+.main-container {
+    position: relative;
+    background-color: var(--pr-bg-color);
+    border-radius: 20px;
+}
+.span-circle {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+.span-circle i{
+    font-size: 56px;
+    color: white;
+}
+.span-text{
+    padding: 50px;
+}
+.service-unit{
+    margin-bottom: 60px;
+}
+.mb-80px{
+    margin-bottom: 80px;
+}
+.mb-50px{
+    margin-bottom: 50px;
+}
+/* hover and dropdown menu  */
+ /* Styling for the submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: var(--pr-bg-color);
+    padding: 10px;
+    min-width: 150px;
+    list-style-type: none;
+}
+.submenu a{
+    color: black;
+}
+.submenu li:hover{
+    color: var(--primary-color);
+}
+.submenu a:hover{
+    text-decoration: none;
+}
+.footer-submenu{
+    color: var(--primary-color);
+    transform: translate3d(60px, -20px, 0px);
+}
+.footer-submenu a, .footer-submenu a:hover{
+    color: var(--primary-color);
+}
+.footer-ul .services:hover .submenu{
+    display: block;
+}
+#navbarNav li:hover .submenu {
+    display: block;
+}
+/* hero section  */
+#hero .p-15{
+    padding: 15% 0;
+}
+/* about us section  */
+#about-us{
+    background-color: var(--pr-bg-color);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.intro-text{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.mission-li{
+    list-style-type: none;
+}
+.mission-li li{
+    margin-top: 10px;
+}
+/* company-intro section  */
+#company-intro{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.img-circle-wrap{
+    width: auto;
+
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+.img-circle{
+    border-radius: 50%;
+}
+.company-subtitle{
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+#clients{
+    background-color: var(--pr-bg-color);
+    padding: 50px;
+}
+.client-wrap{
+    margin: 20px 20px;
+}
+.client-img-thumb{
+    width: 80px;
+    height: 80px;
+    object-fit: fill;
+}
+#locations{
+    background-image: url(./imgs/aboutus/map.webp);
+}
+#locations p{
+    color: var(--primary-color);
+}
+/* management team  */
+.manager-img-thumb{
+    width: 100px;
+    height: auto;
+    object-fit: fill;
+}
+.manager .img{
+    float: left;
+}
+.manager-text{
+    padding-left: 120px;
+}
+.manager-name{
+    color: var(--primary-color);
+}
+.title{
+    color: var(--light-grey-text-color);
+}
+.ad-icon, .ad-title{
+    text-align: center;
+}
+.fydi-ad-icon{
+    font-size: 5rem; 
+    color: cornflowerblue;
+}
+.fydi-footer{
+    background-color: var(--primary-color); 
+    padding-top: 2rem; 
+    padding-bottom: 2rem;
+}
+.main-container:hover .span-circle{
+    background: var(--pr-bg-color);
+}
+.main-container:hover i{
+    color: var(--primary-color);
+}
+.main-container:hover .span-text, .main-container:hover a{
+    background: var(--primary-color);
+    color: white;
+}
+.bg-wrap{
+    padding: 20px 20px;
+    text-align: center;
+}
+.pr-bg-wrap{
+    background-color: var(--primary-color);
+    color: white;
+}
+.plain-bg-wrap{
+    background-color: var(--pr-bg-color);
+    color: black;
+}
+.full-banner{
+    background-color: var(--primary-color);
+    margin: 30px 0;
+    padding: 30px 0;
+    color: white;
+}
+.intro-text{
+    font-weight: 500;
+    font-size: 20px;
+}
+.ad-ul{
+    list-style-type: none;
+}
+.ad-ul li{
+    margin: 20px 0;
+}
+.ad-point-icon{
+    font-size: 20px;
+    color: var(--light-green-color);
+}
+.contact-icon{
+    color: var(--primary-color);
+}
+.right-text b{
+    font-weight: 800;
+    font-size: 22px;
+}
+#contact-form{
+    background-color: var(--pr-bg-color);
+}
+@media screen and (min-width: 960px) {
+    #hero{
+        min-height: 500px;
+        height: calc(100vh);
+    }
+    .lg-mt-100{
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width: 959px) {
+    .sm-hide{
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    .nav-item a{
+        /* min-width: 120px; */
+    }
+    .no-padding-lr{
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+}
+@media screen and (max-width:767px) {
+    .hero-wrapper{
+        padding: 40px;
+    }
+    #hero{
+        text-align: center;
+    }
+    .intro-text{
+        padding: 20px 40px !important;
+    }
+}
