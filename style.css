@@ -197,9 +197,7 @@ section{
 .highlights{
     font-size: 20px;
 }
-.flex-highlights{
-    display: flex;
-}
+
 .highlights .li-block{
     width: 33%;
 }
@@ -304,7 +302,7 @@ section{
 }
 .intro-text{
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
 }
 .ad-ul{
     list-style-type: none;
@@ -404,6 +402,9 @@ section{
 .mr-2{
     margin-right: 2rem;
 }
+.round-corner{
+    border-radius: 10px;
+}
 @media screen and (min-width: 960px) {
     #hero{
         min-height: 500px;
@@ -414,6 +415,9 @@ section{
     }
     .nav-ul-ml{
         margin-left: 10% !important;
+    }
+    .flex-highlights{
+        display: flex;
     }
 }
 @media screen and (max-width: 959px) {
@@ -431,14 +435,21 @@ section{
     }
 }
 @media screen and (max-width:767px) {
-    .hero-wrapper{
-        padding: 40px;
+    .span-text{
+        padding-top: 50px;
+        padding-left: 0%;
+        padding-right: 0%;
+        padding-bottom: 10px;
     }
     #hero{
         text-align: center;
     }
+    .mission-li{
+        padding: 0%;
+    }
     .intro-text{
-        padding: 20px 40px !important;
+        /* padding: 20px 40px !important; */
+        font-size: 16px;
     }
     .last-btn{
         display: none;
