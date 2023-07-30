@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="FYDI company profile. We are driven by a passion for delivering exceptional services. Services we provide: BPO, telemarketing, online customer services, debt collection, call center services and content review services. ">
-
-    <title>FYDI Company Profile</title>
+    <title>Company Profile</title>
     <link rel="icon" type="image/png" href="./imgs/fydi_logo.jpeg">
-    <link rel="stylesheet" href="./fydi.css">
-    <link rel="stylesheet" href="./style.css">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./media.css">
+    <link rel="stylesheet" href="./css/float-anim.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./fydi.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/float-panel.js"></script>
+    <script src="./js/fydi.js"></script>
     <style>
     /* Add your custom styles here */
     </style>
@@ -47,7 +50,7 @@
         <!-- Navbar Collapse -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <!-- Navbar Items -->
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav nav-ul-ml">
             <li class="nav-item">
               <a class="nav-link" href="#">
                 Home
@@ -86,360 +89,552 @@
                 </li>
               </ul>
             </li>
+            <li class="nav-item"></li>
             <li class="nav-item">
-              <a class="nav-link" href="/">Languages</a>
+              <a class="nav-link" href="#">Languages</a>
               <ul class="submenu">
                 <li>
                   <a href="https://zh.fydiglobal.com/">中文</a>
                 </li>
+                <li>
+                  Español
+                </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./contact-us">Contact Us</a>
+              <a class="nav-link" href="./contact-us">
+                Contact Us
+              </a>
             </li>
             <!-- <li class="nav-item">
               <button class="btn btn-primary" style="margin-left: 1rem;">Online Consults</button>
             </li> -->
           </ul>
+          <!-- right btns  -->
+          <div class="header-right flex">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#demoModal">
+              Request A Demo
+            </button>
+            <i class="bi bi-telephone"></i>
+            <a href="tel:+16572358849">
+              <b>+1(657)235-8849</b>
+            </a>
+          </div>
         </div>
       </nav>
     </header>
-    <section id="company-intro">
-      <div class="d-flex justify-content-center align-items-center mb-80px">
-        <h1>Company Profile</h1>
-      </div>
+    <!-- Hero Section -->
+    <section id="hero" class="pr-bg-section text-center">
+      <!-- Hero Container -->
       <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-12">
+        <!-- Hero Row -->
+        <div class="row align-items-center justify-content-center hero-wrapper">
+          <!-- Left Side Div -->
+          <div class="col-md-12 d-flex align-items-center justify-content-center p-6">
+            <div class="">
+              <h1>
+                Who We Are
+              </h1>
+              <p class="intro-text">
+                At FYDI(Fullfil Your Dreams Internationally), we are driven by a passion for delivering exceptional services that exceed expectations. 
+                With a team of highly skilled professionals and a customer-centric approach, we strive to be at the forefront of the BPO industry, 
+                setting new standards of excellence.
+              </p>
+              <button class="btn btn-secondary" data-toggle="modal" data-target="#demoModal">
+                Get Started
+              </button>
+            </div>
+          </div>
+          <!-- Right Side Div -->
+          <!-- <div class="col-md-4 d-md-block d-none">
+            <div>
+              <img src="./imgs/aboutus/fydi_team_1.jpeg" alt="Image" class="img-fluid">
+            </div>
+            <div>
+              <img src="./imgs/aboutus/fydi_team_2.jpeg" alt="Image" class="img-fluid mt-n5 mr-2">
+            </div>
+          </div> -->
+          <div class="img-center">
+            <img src="./imgs/aboutus/fydi_team_1_full_img.jpeg" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="company-intro" class="mt-10">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-5 slideanim">
+            <div class="img-circle-wrap">
+              <img src="./imgs/aboutus/profile_1.png" alt="" class="img-fluid img-circle">
+              <div class="badge badge-on-right">
+                <i class="bi bi-telephone"></i>
+                Call Us:
+                <br>
+                +1(657)235-8849
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 slideanim">
             <h5 class="company-subtitle">
-              <i class="bi bi-person-vcard"></i>
-              Who We Are
+              <i class="bi bi-globe2"></i>
+              Multilingual and Global Reach
             </h5>
+            <ul class="highlights">
+              <li>
+                Across 7 Countries
+              </li>
+              <li>
+                12 Languages Support
+              </li>
+              <li>
+                10 Call Centers
+              </li>
+              <li>
+                4,000 Employees
+              </li>
+            </ul>
             <p>
-              At FYDI(Fullfil Your Dreams Internationally), we are driven by a passion for delivering exceptional services that exceed expectations. With a team of highly skilled professionals and a customer-centric approach, we strive to be at the forefront of the BPO industry, setting new standards of excellence.
+              FYDI operates a global network of 10 strategically located call centers in Ecuador, Mexico, Egypt, Indonesia, and China. 
+              Our extensive team of over 4,000 employees delivers multilingual services in up to 12 languages, including Spanish, English, Chinese, Arabic, Malay, German, French, and Indonesian.
+              <br>
             </p>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-7 slideanim">
             <h5 class="company-subtitle">
-              <i class="bi bi-hand-thumbs-up"></i>
-              Our Commitment to Quality
+              <i class="bi bi-headset"></i>
+              How We Help
             </h5>
+            <b>Commitment to Quality</b>
             <p>
               Quality is the cornerstone of our operations. We have meticulously crafted our processes to ensure accuracy, efficiency, and utmost precision in every task we undertake. Our commitment to quality permeates through every level of our organization, from our experienced management team to our dedicated customer representatives.
             </p>
-            <h5 class="company-subtitle">
-              <i class="bi bi-globe2"></i>
-              A Global Reach
-            </h5>
-            <p>With a global presence, including locations in the USA, Ecuador, Pakistan, Indonesia, and more, we possess a deep understanding of diverse markets and cultures. This enables us to tailor our services to meet the specific needs of each region, fostering strong relationships with clients worldwide.</p>
+            <b>Innovation and Technology</b>
+            <p>
+              Embracing cutting-edge technologies and best practices, we continually strive to optimize our services and provide innovative solutions to our clients. Our forward-thinking approach empowers businesses to stay ahead in a rapidly evolving marketplace.
+            </p>
           </div>
-          <div class="col-md-4 col-sm-12">
-            <!-- <div class="img-circle-wrap"> -->
-            <img src="./imgs/aboutus/fydi_team_1.jpeg" alt="fydi_team_1" class="img-fluid">
-            <!-- </div> -->
-          </div>
-          <div class="row">
-            <div class="col-md-4 col-sm-12">
-              <img src="./imgs/aboutus/fydi_team_2.jpeg" alt="fydi_team_1" class="img-fluid">
+          <div class="col-md-5">
+            <div class="img-circle-wrap ">
+              <img src="./imgs/aboutus/profile_2.png" alt="" class="img-fluid img-circle">
+              <div class="badge badge-on-left">
+                <i class="bi bi-envelope"></i>
+                Email Us
+                <br>
+                business@fydiglobal.com
+              </div>
             </div>
-            <div class="col-md-8 col-sm-12">
-              <h5 class="company-subtitle">
-                <i class="bi bi-pc-display-horizontal"></i>
-                Innovation and Technology
-              </h5>
-              <p>Embracing cutting-edge technologies and best practices, we continually strive to optimize our services and provide innovative solutions to our clients. Our forward-thinking approach empowers businesses to stay ahead in a rapidly evolving marketplace.</p>
-              <h5 class="company-subtitle">
-                <i class="bi bi-person-hearts"></i>
-                Social Responsibility
-              </h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="img-circle-wrap slideanim">
+              <img src="./imgs/aboutus/profile_3.png" alt="" class="img-fluid img-circle">
+              <div class="badge badge-on-left">
+                <i class="bi bi-headset"></i>
+                Contact Us
+                <br>
+                +1(657)235-8849
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 slideanim">
+            <h5 class="company-subtitle">
+              <i class="bi bi-headset"></i>
+              Partner with Us
+            </h5>
+            <p>
+              Our unwavering commitment lies in empowering our clients to optimize business processes, achieve cost efficiencies, enhance customer satisfaction, and drive substantial value across their entire enterprise. With a focus on excellence, we stand ready to be your trusted partner in elevating your business to new heights.
+              <br>
+              <br>
+              As a client-centric organization, we consider our clients' success as our own. By partnering with FYDI, businesses gain access to a reliable and experienced team that is dedicated to driving growth, enhancing customer experiences, and unlocking new possibilities.
+            </p>
+          </div>
+        </div>
+        
+      </section>
+      <section id="social-responsibility">
+        <div class="d-flex justify-content-center align-items-center mb-80px">
+          <h1>Social Responsibility</h1>
+        </div>
+        <div class="container">
+          <div class="row mt-5">
+            <h3>Empowering Communities through Job Creation</h3>
+            <p>
+              At FYDI, we are dedicated to making a positive impact in the communities we serve. We take immense pride in providing employment opportunities for top talent in countries like The Philippines and Indonesia. 
+              By offering job security and fair wages, we not only impact the lives of our employees but also uplift their families and contribute to the betterment of their communities. 
+              Together, we create a brighter future, fostering sustainable growth, and promoting economic empowerment for all.
+            </p>
+            <h3>Sustainability and Environmental Stewardship</h3>
+            <p>
+              Through conscientious efforts, we actively work to reduce our energy consumption, optimize paper use, minimize solid waste generation, curtail air travel, and responsibly manage water resources. 
+              Preserving the planet for future generations is a cornerstone of our values, and we continuously strive to make a positive impact through eco-conscious practices.
+            </p>
               <p>
                 Beyond our business endeavors, we are committed to social responsibility and community engagement. As a responsible corporate citizen, we actively contribute to the betterment of society, supporting initiatives that make a positive impact on the lives of people around us.
               </p>
-              <h5 class="company-subtitle">
-                <i class="bi bi-headset"></i>
-                Partner with Us
-              </h5>
-              <p>
-                As a client-centric organization, we consider our clients' success as our own. By partnering with FYDI, businesses gain access to a reliable and experienced team that is dedicated to driving growth, enhancing customer experiences, and unlocking new possibilities.
-              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="clients">
+        <div class="d-flex justify-content-center align-items-center mb-80px">
+          <h1>Happy Clients</h1>
+        </div>
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_1.png" alt="fydi_client_1" class="client-img-thumb slideanim ">
+            </div>
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_2.png" alt="fydi_client_2" class="client-img-thumb slideanim">
+            </div>
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_3.png" alt="fydi_client_3" class="client-img-thumb slideanim">
+            </div>
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_5.png" alt="fydi_client_5" class="client-img-thumb slideanim">
+            </div>
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_6.png" alt="fydi_client_6" class="client-img-thumb slideanim">
+            </div>
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_7.png" alt="fydi_client_7" class="client-img-thumb slideanim">
+            </div>
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_4.jpeg" alt="fydi_client_4" class="client-img-thumb slideanim">
+            </div>
+          </div>
+          <div class="row justify-content-center align-items-center">
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_8.png" alt="fydi_client_8" class="client-img-thumb slideanim">
+            </div>
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_9.png" alt="fydi_client_9" class="client-img-thumb slideanim">
+            </div>
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_10.png" alt="fydi_client_10" class="client-img-thumb slideanim">
+            </div>
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_11.png" alt="fydi_client_11" class="client-img-thumb slideanim">
+            </div>
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_12.png" alt="fydi_client_12" class="client-img-thumb slideanim">
+            </div>
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_13.png" alt="fydi_client_13" class="client-img-thumb slideanim">
+            </div>
+            <div class="client-wrap">
+              <img src="./imgs/clients/fydi_client_14.png" alt="fydi_client_14" class="client-img-thumb slideanim">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- simple form  -->
+      <section id="contact-form" class="pr-bg-section">
+        <div class="d-flex justify-content-center align-items-center mb-80px">
+          <h3>Let our expert shows you a demo.</h3>
+        </div>
+        <div class="container">
+          <div class="row">
+            <form>
+              <div class="row">
+                <div class="col-lg-4 col-md-3 col-sm-12">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Enter your name"
+                    >
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-12">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Enter your email"
+                    >
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-12">
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="phone"
+                      placeholder="Enter your phone number"
+                    >
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="interests">Services Interests</label>
+                    <div class="row">
+                      <div class="col-lg-2 col-md-3 col-sm-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="bpo">
+                          <label class="form-check-label" for="bpo">
+                            BPO
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-3 col-sm-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="Telemarketing">
+                          <label class="form-check-label" for="Telemarketing">
+                            Telemarketing
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-3 col-sm-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="CallCenter">
+                          <label class="form-check-label" for="CallCenter">
+                            Call Center
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-3 col-sm-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="DebtCollection">
+                          <label class="form-check-label" for="DebtCollection">
+                            Debt Collection
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-3 col-sm-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="OnlineCS">
+                          <label class="form-check-label" for="OnlineCS">
+                            Online Customer Services
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-3 col-sm-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="ContentReview">
+                          <label class="form-check-label" for="ContentReview">
+                            Content Review
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="4"
+                      placeholder="Enter your message"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-secondary">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Modal Form -->
+      <div
+        class="modal fade"
+        id="demoModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="demoModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="demoModalLabel">Request Demo/Quote</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Your demo request form goes here -->
+              <p>Fill out the form below to request a demo/quote:</p>
+              <form>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter your name"
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter email"
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="email">Phone</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Enter Phone"
+                  >
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              </form>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section id="clients">
-      <div class="d-flex justify-content-center align-items-center mb-80px">
-        <h1>Happy Clients</h1>
-      </div>
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_1.png" alt="fydi_client_1" class="client-img-thumb">
-          </div>
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_2.png" alt="fydi_client_2" class="client-img-thumb">
-          </div>
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_3.png" alt="fydi_client_3" class="client-img-thumb">
-          </div>         
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_5.png" alt="fydi_client_5" class="client-img-thumb">
-          </div>
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_6.png" alt="fydi_client_6" class="client-img-thumb">
-          </div>
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_7.png" alt="fydi_client_7" class="client-img-thumb">
-          </div>
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_4.png" alt="fydi_client_4" class="client-img-thumb">
-          </div>
-        </div>
-        <div class="row justify-content-center align-items-center">
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_8.png" alt="fydi_client_8" class="client-img-thumb">
-          </div>
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_9.png" alt="fydi_client_9" class="client-img-thumb">
-          </div>
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_10.png" alt="fydi_client_10" class="client-img-thumb">
-          </div>
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_11.png" alt="fydi_client_11" class="client-img-thumb">
-          </div>
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_12.png" alt="fydi_client_12" class="client-img-thumb">
-          </div>
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_13.png" alt="fydi_client_13" class="client-img-thumb">
-          </div>
-          <div class="client-wrap">
-            <img src="./imgs/clients/fydi_client_14.png" alt="fydi_client_14" class="client-img-thumb">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="locations">
-      <div class="d-flex justify-content-center align-items-center mb-80px">
-        <h1>Our Locations</h1>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-2">
-            <p>Tustin, CA USA</p>
-          </div>
-          <div class="col-sm-6 col-md-2">
-            <p>Mexico</p>
-          </div>
-          <div class="col-sm-6 col-md-2">
-            <p>Ecuador</p>
-          </div>
-          <div class="col-sm-6 col-md-2">
-            <p>Indonesia</p>
-          </div>
-          <div class="col-sm-6 col-md-2">
-            <p>Pakistan</p>
-          </div>
-          <div class="col-sm-6 col-md-2">
-            <p>Tunisia</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="management-team">
-      <div class="d-flex justify-content-center align-items-center mb-80px">
-        <h1>Management Team</h1>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-3">
-            <div class="manager">
-              <div class="img">
-                <img src="./imgs/management/FYDI_ceo.png" alt="FYDI CEO" class="manager-img-thumb">
-              </div>
-              <div class="manager-text">
-                <div class="manager-name">
-                  Jitian Dong
-                </div>
-                <div class="title">
-                  CEO
-                </div>
-                <div class="text">
-                  10+ years of global operation experience.
-                </div>
-              </div>
+      <!-- end of modal  -->
+          <!-- fixed buttons - quick access -->
+    <div class="button-container">
+      <button class="fixed-button btn-secondary first-btn">
+        <a href="tel:+16572358849">Call Us</a>
+      </button>
+      <button class="fixed-button btn-secondary second-btn">
+        <a href="mailto:business@fydiglobal.com" target="_blank">
+          Email Us
+        </a>
+      </button>
+      <button class="fixed-button btn-secondary last-btn" data-toggle="modal" data-target="#demoModal">
+        Inquire
+      </button>
+    </div>
+      <!-- Footer Section -->
+      <footer class="fydi-footer">
+        <div class="container">
+          <div class="row">
+            <!-- Location -->
+            <div class="col-md-3 col-sm-6">
+              <p class="footer-title">Location</p>
+              <ul class="footer-ul">
+                <li class="footer-li">
+                  <!-- <i class="bi bi-geo-alt-fill"></i>
+                &nbsp; -->
+                  17592 E 17th St, Suite 250
+                  <br>
+                  Tustin, CA 92780 USA
+                </li>
+                <li class="footer-li">
+                  <!-- <i class="bi bi-envelope"></i>
+                &nbsp; -->
+                  business@fydiglobal.com
+                </li>
+              </ul>
+            </div>
+            <!-- Social Media -->
+            <div class="col-md-3 col-sm-6">
+              <p class="footer-title">Follow Us</p>
+              <ul class="footer-ul inline-ul">
+                <li class="footer-li">
+                  <a href="https://www.instagram.com/businessfydiglobal/" target="_blank">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </li>
+                <li class="footer-li">
+                  <a href="https://www.facebook.com/people/FYDI/100092486293971/" target="_blank">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </li>
+                <li class="footer-li">
+                  <a href="https://www.linkedin.com/company/fydiglobal/" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Side Links -->
+            <div class="col-md-3 col-sm-6">
+              <p class="footer-title">Links</p>
+              <ul class="footer-ul">
+                <li class="footer-li">
+                  <a href="/">Home</a>
+                </li>
+                <li class="footer-li">
+                  <a href="./company-profile">Company Profile</a>
+                </li>
+                <li class="footer-li">
+                  <a href="/contact-us">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Services Links -->
+            <div class="col-md-3 col-sm-6">
+              <p class="footer-title">Our Services</p>
+              <ul class="footer-ul">
+                <li class="footer-li">
+                  <a href="./services/bpo.html">BPO Services</a>
+                </li>
+                <li class="footer-li">
+                  <a href="./services/telemarketing.html">Telemarketing</a>
+                </li>
+                <li class="footer-li">
+                  <a href="./services/call-center.html">Call Center</a>
+                </li>
+                <li class="footer-li">
+                  <a href="./services/debt-collection.html">
+                    Debt Collection
+                  </a>
+                </li>
+                <li class="footer-li">
+                  <a href="./services/content-review.html">Content Review</a>
+                </li>
+                <li class="footer-li">
+                  <a href="./services/customer-services.html">Customer Services</a>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="col-sm-12 col-md-3">
-            <div class="manager">
-              <div class="img">
-                <img src="./imgs/management/FYDI_director.png" alt="FYDI CEO" class="manager-img-thumb">
-              </div>
-              <div class="manager-text">
-                <div class="manager-name">
-                  Xiao Hu
-                </div>
-                <div class="title">
-                  Director
-                </div>
-                <div class="text">
-                  Specializes in network management, e-commerce, and finance apps.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-3">
-            <div class="manager">
-              <div class="img">
-                <img src="./imgs/management/FYDI_director2.png" alt="FYDI CEO" class="manager-img-thumb">
-              </div>
-              <div class="manager-text">
-                <div class="manager-name">
-                  Guangming Lan
-                </div>
-                <div class="title">
-                  Director
-                </div>
-                <div class="text">
-                  <p>
-                    Specializes in tax revisions, wealth accumulation, and strategic collaborations.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-3">
-            <div class="manager">
-              <div class="img">
-                <img src="./imgs/management/FYDI_manager.png" alt="FYDI CEO" class="manager-img-thumb">
-              </div>
-              <div class="manager-text">
-                <div class="manager-name">
-                  Yiming Shen
-                </div>
-                <div class="title">
-                  Director
-                </div>
-                <div class="text">
-                  Expert of launching new financial initiatives. 
-                </div>
-              </div>
-            </div>
-          </div>
+          <p class="text-center" style="margin-top: 1rem;">
+            &copy;
+            <script>document.write(new Date().getFullYear())</script>
+            Fydi Global. All rights reserved.
+          </p>
         </div>
-      </div>
-    </section>
-    <!-- Footer Section -->
-    <footer class="fydi-footer">
-      <div class="container">
-        <div class="row">
-          <!-- Location -->
-          <div class="col-md-4">
-            <p class="footer-title">Location</p>
-            <ul class="footer-ul">
-              <li class="footer-li">
-                <i class="bi bi-geo-alt-fill"></i>
-                &nbsp;
-              17592 E 17th St, Suite 250
-                <br>
-                &nbsp; &nbsp; &nbsp; &nbsp; Tustin, CA 92780 USA
-              </li>
-              <li class="footer-li">
-                <i class="bi bi-envelope"></i>
-                &nbsp;
-              business@fydiglobal.com
-              </li>
-            </ul>
-          </div>
-          <!-- Social Media -->
-          <div class="col-md-4">
-            <p class="footer-title">Follow Us</p>
-            <ul class="footer-ul inline-ul">
-              <li class="footer-li">
-                <a href="https://www.instagram.com/businessfydiglobal/" target="_blank">
-                  <i class="bi bi-instagram"></i>
-                </a>
-              </li>
-              <li class="footer-li">
-                <a href="https://www.facebook.com/people/FYDI/100092486293971/" target="_blank">
-                  <i class="bi bi-facebook"></i>
-                </a>
-              </li>
-              <li class="footer-li">
-                <a href="https://www.linkedin.com/company/fydiglobal/" target="_blank">
-                  <i class="bi bi-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- Side Links -->
-          <div class="col-md-4">
-            <p class="footer-title">Links</p>
-            <ul class="footer-ul">
-              <li class="footer-li">
-                <a href="/">Home</a>
-              </li>
-              <li class="footer-li">
-                <a href="./company-profile">Company Profile</a>
-              </li>
-              <li class="footer-li services">
-                Services
-                <!-- Submenu -->
-                <ul class="submenu footer-submenu">
-                  <li>
-                    <a href="./services/bpo.html">BPO Services</a>
-                  </li>
-                  <li>
-                    <a href="./services/telemarketing.html">Telemarketing</a>
-                  </li>
-                  <li>
-                    <a href="./services/call-center.html">Call Center</a>
-                  </li>
-                  <li>
-                    <a href="./services/debt-collection.html">
-                      Debt Collection
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./services/content-review.html">Content Review</a>
-                  </li>
-                  <li>
-                    <a href="./services/customer-services.html">Customer Services</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer-li">
-                <a href="/contact-us">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <p class="text-center" style="margin-top: 1rem;">
-          &copy;
-          <script>document.write(new Date().getFullYear())</script>
-          Fydi Global. All rights reserved.
-        </p>
-      </div>
-    </footer>
-    <script>
+      </footer>
+      <script>
       // collapse menu when click outside 
       $(document).on('click', function (e) {
         if ($(e.target).closest('.navbar').length === 0) {
           $('.navbar-collapse').collapse('hide');
         }
       });
-    </script>
-    <!-- live chat embed  -->
-    <!-- Start of LiveChat (www.livechat.com) code -->
-    <script>
+      // fixed message on top 
+    fix_message("popupmessage");
+      </script>
+      <!-- live chat embed  -->
+      <!-- Start of LiveChat (www.livechat.com) code -->
+      <script>
       window.__lc = window.__lc || {};
       window.__lc.license = 15761178;
       ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-    </script>
-    <noscript>
-      <a href="https://www.livechat.com/chat-with/15761178/" rel="nofollow">Chat with us</a>
-      , powered by
-      <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
-    </noscript>
-    <!-- End of LiveChat code -->
-  </body>
-</html>
+      </script>
+      <noscript>
+        <a href="https://www.livechat.com/chat-with/15761178/" rel="nofollow">Chat with us</a>
+        , powered by
+        <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+      </noscript>
+      <!-- End of LiveChat code -->
+    </body>
+  </html>

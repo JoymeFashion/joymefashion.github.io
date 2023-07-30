@@ -10,15 +10,18 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./imgs/fydi_logo.jpeg">
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="./fydi.css">
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./media.css">
+    <link rel="stylesheet" href="./css/float-anim.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./fydi.css">
+    <link rel="stylesheet" href="./style.css">
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/float-panel.js"></script>
+    <script src="./js/fydi.js"></script>
     <!-- Custom Styles (Embedded in the head) -->
     <style></style>
   </head>
@@ -51,7 +54,7 @@
         <!-- Navbar Collapse -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <!-- Navbar Items -->
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav nav-ul-ml">
             <li class="nav-item active">
               <a class="nav-link" href="#">
                 Home
@@ -90,24 +93,63 @@
                 </li>
               </ul>
             </li>
+            <li class="nav-item"></li>
             <li class="nav-item">
               <a class="nav-link" href="#">Languages</a>
               <ul class="submenu">
                 <li>
                   <a href="https://zh.fydiglobal.com/">中文</a>
                 </li>
+                <li>
+                  Español
+                </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./contact-us">Contact Us</a>
+              <a class="nav-link" href="./contact-us">
+                Contact Us
+              </a>
             </li>
             <!-- <li class="nav-item">
               <button class="btn btn-primary" style="margin-left: 1rem;">Online Consults</button>
             </li> -->
           </ul>
+          <!-- right btns  -->
+          <div class="header-right flex">
+            <button class="btn btn-primary">
+              Request A Demo
+            </button>
+            <i class="bi bi-telephone"></i>
+            <a href="tel:+16572358849">
+              <b>+1(657)235-8849</b>
+            </a>
+          </div>
         </div>
       </nav>
     </header>
+    <!-- message  -->
+    <div class="message-container" id="popupmessage">
+      <!-- Full-width message -->
+      <div class="alert alert-primary alert-dismissible fade show text-center align-items-center justify-content-center pr-bg-section" role="alert">
+        <strong>Hello there!</strong>
+        Boost your business's efficiency and productivity.
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+          id="close-button"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <a
+          type="button"
+          class="btn btn-white"
+          data-toggle="modal"
+          data-target="#demoModal"
+        >Request Demo</a>
+      </div>
+    </div>
     <!-- Hero Section -->
     <section id="hero">
       <!-- Hero Container -->
@@ -124,10 +166,13 @@
                 FYDI(Fullfil Your Dreams Internationally) offers comprehensive BPO solutions, efficient online customer service, effective telemarketing, and reliable debt collection services.
                 Make Your Business More Profitable with FYDI.
               </p>
-              <button class="btn btn-primary">
-                <a href="./contact-us.html" style="color: white;">
-                  Get A Price Quote
-                </a>
+              <a href="#services">
+                <button class="btn btn-transparent">
+                  Our Services
+                </button>
+              </a>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#demoModal">
+                Free Quote
               </button>
             </div>
           </div>
@@ -146,7 +191,7 @@
       <div class="container">
         <div class="row">
           <!-- Service Unit 1 -->
-          <div class="col-md-6 col-lg-4 service-unit">
+          <div class="col-md-6 col-lg-4 service-unit slideanim">
             <div class="main-container">
               <div class="span-circle">
                 <i class="bi bi-briefcase"></i>
@@ -165,7 +210,7 @@
             </div>
           </div>
           <!-- Service Unit 2 -->
-          <div class="col-md-6 col-lg-4 service-unit">
+          <div class="col-md-6 col-lg-4 service-unit slideanim">
             <div class="main-container">
               <div class="span-circle">
                 <i class="bi bi-telephone-inbound"></i>
@@ -184,7 +229,7 @@
             </div>
           </div>
           <!-- Service Unit 3 -->
-          <div class="col-md-6 col-lg-4 service-unit">
+          <div class="col-md-6 col-lg-4 service-unit slideanim">
             <div class="main-container">
               <div class="span-circle">
                 <i class="bi bi-person-circle"></i>
@@ -203,7 +248,7 @@
             </div>
           </div>
           <!-- Service Unit 4 -->
-          <div class="col-md-6 col-lg-4 service-unit">
+          <div class="col-md-6 col-lg-4 service-unit slideanim">
             <div class="main-container">
               <div class="span-circle">
                 <i class="bi bi-arrow-up-circle-fill"></i>
@@ -222,7 +267,7 @@
             </div>
           </div>
           <!-- Service Unit 5 -->
-          <div class="col-md-6 col-lg-4 service-unit">
+          <div class="col-md-6 col-lg-4 service-unit slideanim">
             <div class="main-container">
               <div class="span-circle">
                 <i class="bi bi-journal-check"></i>
@@ -241,7 +286,7 @@
             </div>
           </div>
           <!-- Service Unit 6 -->
-          <div class="col-md-6 col-lg-4 service-unit">
+          <div class="col-md-6 col-lg-4 service-unit slideanim">
             <div class="main-container">
               <div class="span-circle">
                 <i class="bi bi-collection"></i>
@@ -263,14 +308,14 @@
       </div>
     </section>
     <!-- About Us Section -->
-    <section id="about-us">
+    <section id="about-us" class="pr-bg-section">
       <div class="d-flex justify-content-center align-items-center mb-80px">
         <h1>About Us</h1>
       </div>
       <div class="container">
         <div class="row">
           <!-- Our Team -->
-          <div class="col-lg-6 col-md-12 text-center">
+          <div class="col-lg-6 col-md-12 text-center slideanim">
             <img src="./imgs/aboutus/team.jpeg" alt="FYDI_Team" class="img-fluid">
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 intro-text">
@@ -324,11 +369,11 @@
               Learn More
             </a>
           </div>
-          <div class="col-lg-6 sm-hide text-center">
+          <div class="col-lg-6 sm-hide text-center slideanim">
             <img src="./imgs/aboutus/FYDI_mission.jpeg" alt="FYDI_Team" class="img-fluid">
           </div>
           <!-- Our Footprints -->
-          <div class="col-lg-6 col-md-12 text-center">
+          <div class="col-lg-6 col-md-12 text-center slideanim">
             <img src="./imgs/aboutus/footprints.png" alt="FYDI_Team" class="img-fluid lg-mt-100">
           </div>
           <div class="col-lg-6 col-md-12 intro-text">
@@ -357,7 +402,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 slideanim">
             <div class="ad-icon">
               <i class="bi bi-shield-check fydi-ad-icon"></i>
             </div>
@@ -370,7 +415,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 slideanim">
             <div class="ad-icon">
               <i class="bi bi-calendar-check fydi-ad-icon"></i>
             </div>
@@ -383,7 +428,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 slideanim">
             <div class="ad-icon">
               <i class="bi bi-people fydi-ad-icon"></i>
             </div>
@@ -399,7 +444,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 slideanim">
             <div class="ad-icon">
               <i class="bi bi-person-workspace fydi-ad-icon"></i>
             </div>
@@ -415,7 +460,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 slideanim">
             <div class="ad-icon">
               <i class="bi bi-headset fydi-ad-icon"></i>
             </div>
@@ -431,7 +476,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 slideanim">
             <div class="ad-icon">
               <i class="bi bi-card-checklist fydi-ad-icon"></i>
             </div>
@@ -451,145 +496,217 @@
       </div>
     </section>
     <!-- simple form  -->
-    <section id="contact-form">
+    <section id="contact-form" class="pr-bg-section">
       <div class="d-flex justify-content-center align-items-center mb-80px">
         <h3>Let our expert shows you a demo.</h3>
       </div>
       <div class="container">
-        <div class="row">
-          <form>
-            <div class="row">
-              <div class="col-lg-4 col-md-3 col-sm-12">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="Enter your name"
-                  >
-                </div>
+        <form>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                >
               </div>
-              <div class="col-lg-4 col-md-3 col-sm-12">
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="Enter your email"
-                  >
-                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                >
               </div>
-              <div class="col-lg-4 col-md-3 col-sm-12">
-                <div class="form-group">
-                  <label for="phone">Phone</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="phone"
-                    placeholder="Enter your phone number"
-                  >
-                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                >
               </div>
-              <div class="col-lg-12">
-                <div class="form-group">
-                  <label for="interests">Services Interests</label>
-                  <div class="row">
-                    <div class="col-lg-2 col-md-3 col-sm-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="bpo">
-                        <label class="form-check-label" for="bpo">
-                          BPO
-                        </label>
-                      </div>
+            </div>
+            <!-- services interests  -->
+            <!-- <div class="col-lg-12">
+              <div class="form-group">
+                <label for="interests">Services Interests</label>
+                <div class="row">
+                  <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="bpo">
+                      <label class="form-check-label" for="bpo">
+                        BPO
+                      </label>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="Telemarketing">
-                        <label class="form-check-label" for="Telemarketing">
-                          Telemarketing
-                        </label>
-                      </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="Telemarketing">
+                      <label class="form-check-label" for="Telemarketing">
+                        Telemarketing
+                      </label>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="CallCenter">
-                        <label class="form-check-label" for="CallCenter">
-                          Call Center
-                        </label>
-                      </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="CallCenter">
+                      <label class="form-check-label" for="CallCenter">
+                        Call Center
+                      </label>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="DebtCollection">
-                        <label class="form-check-label" for="DebtCollection">
-                          Debt Collection
-                        </label>
-                      </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="DebtCollection">
+                      <label class="form-check-label" for="DebtCollection">
+                        Debt Collection
+                      </label>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="OnlineCS">
-                        <label class="form-check-label" for="OnlineCS">
-                          Online Customer Services
-                        </label>
-                      </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="OnlineCS">
+                      <label class="form-check-label" for="OnlineCS">
+                        Online Customer Services
+                      </label>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="ContentReview">
-                        <label class="form-check-label" for="ContentReview">
-                          Content Review
-                        </label>
-                      </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="ContentReview">
+                      <label class="form-check-label" for="ContentReview">
+                        Content Review
+                      </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-12">
-                <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea
-                    class="form-control"
-                    id="message"
-                    rows="4"
-                    placeholder="Enter your message"
-                  ></textarea>
-                </div>
-              </div>
-              <div class="col-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+            </div> -->
+            <div class="col-lg-12">
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Enter your message"
+                ></textarea>
               </div>
             </div>
-          </form>
-        </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
+    <!-- Modal Form -->
+    <div
+      class="modal fade"
+      id="demoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="demoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="demoModalLabel">Request Demo/Quote</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Your demo request form goes here -->
+            <p>Fill out the form below to request a demo/quote:</p>
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                >
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                >
+              </div>
+              <div class="form-group">
+                <label for="email">Phone</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter Phone"
+                >
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fixed buttons - quick access -->
+    <div class="button-container">
+      <button class="fixed-button btn-secondary first-btn">
+        <a href="tel:+16572358849">Call Us</a>
+      </button>
+      <button class="fixed-button btn-secondary second-btn">
+        <a href="mailto:business@fydiglobal.com" target="_blank">
+          Email Us
+        </a>
+      </button>
+      <button class="fixed-button btn-secondary last-btn" data-toggle="modal" data-target="#demoModal">
+        Inquire
+      </button>
+    </div>
     <!-- Footer Section -->
     <footer class="fydi-footer">
       <div class="container">
         <div class="row">
           <!-- Location -->
-          <div class="col-md-4">
+          <div class="col-md-3 col-sm-6">
             <p class="footer-title">Location</p>
             <ul class="footer-ul">
               <li class="footer-li">
-                <i class="bi bi-geo-alt-fill"></i>
-                &nbsp;
-              17592 E 17th St, Suite 250
+                <!-- <i class="bi bi-geo-alt-fill"></i>
+                &nbsp; -->
+                17592 E 17th St, Suite 250
                 <br>
-                &nbsp; &nbsp; &nbsp; &nbsp; Tustin, CA 92780 USA
+                Tustin, CA 92780 USA
               </li>
               <li class="footer-li">
-                <i class="bi bi-envelope"></i>
-                &nbsp;
-              business@fydiglobal.com
+                <!-- <i class="bi bi-envelope"></i>
+                &nbsp; -->
+                business@fydiglobal.com
               </li>
             </ul>
           </div>
           <!-- Social Media -->
-          <div class="col-md-4">
+          <div class="col-md-3 col-sm-6">
             <p class="footer-title">Follow Us</p>
             <ul class="footer-ul inline-ul">
               <li class="footer-li">
@@ -610,7 +727,7 @@
             </ul>
           </div>
           <!-- Side Links -->
-          <div class="col-md-4">
+          <div class="col-md-3 col-sm-6">
             <p class="footer-title">Links</p>
             <ul class="footer-ul">
               <li class="footer-li">
@@ -619,34 +736,34 @@
               <li class="footer-li">
                 <a href="./company-profile">Company Profile</a>
               </li>
-              <li class="footer-li services">
-                Services
-                <!-- Submenu -->
-                <ul class="submenu footer-submenu">
-                  <li>
-                    <a href="./services/bpo.html">BPO Services</a>
-                  </li>
-                  <li>
-                    <a href="./services/telemarketing.html">Telemarketing</a>
-                  </li>
-                  <li>
-                    <a href="./services/call-center.html">Call Center</a>
-                  </li>
-                  <li>
-                    <a href="./services/debt-collection.html">
-                      Debt Collection
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./services/content-review.html">Content Review</a>
-                  </li>
-                  <li>
-                    <a href="./services/customer-services.html">Customer Services</a>
-                  </li>
-                </ul>
+              <li class="footer-li">
+                <a href="/contact-us">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Services Links -->
+          <div class="col-md-3 col-sm-6">
+            <p class="footer-title">Our Services</p>
+            <ul class="footer-ul">
+              <li class="footer-li">
+                <a href="./services/bpo.html">BPO Services</a>
               </li>
               <li class="footer-li">
-                <a href="/contact-us">Contact</a>
+                <a href="./services/telemarketing.html">Telemarketing</a>
+              </li>
+              <li class="footer-li">
+                <a href="./services/call-center.html">Call Center</a>
+              </li>
+              <li class="footer-li">
+                <a href="./services/debt-collection.html">
+                  Debt Collection
+                </a>
+              </li>
+              <li class="footer-li">
+                <a href="./services/content-review.html">Content Review</a>
+              </li>
+              <li class="footer-li">
+                <a href="./services/customer-services.html">Customer Services</a>
               </li>
             </ul>
           </div>
@@ -665,6 +782,26 @@
         $('.navbar-collapse').collapse('hide');
       }
     });
+    // close message 
+    const messageContainer = document.getElementById('message-container');
+    const closeButton = document.getElementById('close-button');
+
+    closeButton.addEventListener('click', () => {
+      messageContainer.style.display = 'none';
+    
+    });
+    fix_message("popupmessage");
+
+    // fixed message when scroll
+    // window.onscroll = function () {
+    //         const messageContainer = document.getElementById('popupmessage');
+    //         const scrollDistance = window.pageYOffset || document.documentElement.scrollTop;
+    //         if (scrollDistance > messageContainer.offsetTop) {
+    //             messageContainer.classList.add('sticky-message');
+    //         } else {
+    //             messageContainer.classList.remove('sticky-message');
+    //         }
+    //     };
     </script>
     <!-- live chat embed  -->
     <!-- Start of LiveChat (www.livechat.com) code -->

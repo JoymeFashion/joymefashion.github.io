@@ -51,14 +51,14 @@
         <!-- Navbar Collapse -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <!-- Navbar Items -->
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav nav-ul-ml">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="/">
                 Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item">
               <a class="nav-link" href="./company-profile">Company Profile</a>
             </li>
             <li class="nav-item">
@@ -90,21 +90,37 @@
                 </li>
               </ul>
             </li>
+            <li class="nav-item"></li>
             <li class="nav-item">
-              <a class="nav-link" href="/">Languages</a>
+              <a class="nav-link" href="#">Languages</a>
               <ul class="submenu">
                 <li>
                   <a href="https://zh.fydiglobal.com/">中文</a>
                 </li>
+                <li>
+                  Español
+                </li>
               </ul>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" href="./contact-us">
+                Contact Us
+              </a>
             </li>
             <!-- <li class="nav-item">
               <button class="btn btn-primary" style="margin-left: 1rem;">Online Consults</button>
             </li> -->
           </ul>
+          <!-- right btns  -->
+          <div class="header-right flex">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#demoModal">
+              Request A Demo
+            </button>
+            <i class="bi bi-telephone"></i>
+            <a href="tel:+16572358849">
+              <b>+1(657)235-8849</b>
+            </a>
+          </div>
         </div>
       </nav>
     </header>
@@ -113,7 +129,7 @@
       <div class="d-flex justify-content-center align-items-center mb-80px">
         <h1>Contact Us</h1>
       </div>
-      <div class="container">
+      <!-- <div class="container">
         <div class="row" style="margin-bottom: 5rem;">
           <div class="col-md-4 mobile-mb-2">
             <div class="left-icon">
@@ -148,13 +164,47 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Contact Us Form -->
       <div class="row justify-content-center">
+        <div class="col-lg-5 p-5">      
+          <div class="contact-block d-flex align-items-center">
+            <div class="left-icon">
+              <i class="bi bi-telephone contact-icon"></i>
+            </div>
+            <div class="right-text">
+              <span class="contact-subtitle">Phone:</span>
+              <br>
+              <b>+1(657)235-8849</b>
+            </div>
+          </div>
+          <div class="contact-block d-flex align-items-center">
+            <div class="left-icon">
+              <i class="bi bi-envelope-at contact-icon"></i>
+            </div>
+            <div class="right-text">
+              <span class="contact-subtitle">Email:</span>
+              <br>
+              <b>business@fydiglobal.com</b>
+            </div>
+          </div>
+          <div class="contact-block d-flex align-items-center">
+            <div class="left-icon">
+              <i class="bi bi-geo-alt-fill contact-icon"></i>
+            </div>
+            <div class="right-text">
+              <span class="contact-subtitle">Address:</span>
+              <br>
+              17592 E 17th St, Suite 250
+              <br>
+              Tustin, CA 92780 USA
+            </div>
+          </div>
+        </div>
         <div class="col-lg-7 mb-5">
-          <form action="#" class="p-5 bg-white">
-            <h2 class="h4 text-black mb-5">Contact Form</h2>
-            <h5>Don’t Hesitate to Contact us for any Information.</h5>
+          <form action="#" class="p-5 bg-white form-border">
+              <h2 class="h4 text-black mb-5">Contact Form</h2>
+            <!--<h5>Don’t Hesitate to Contact us for any Information.</h5> -->
             <div class="row form-group">
               <div class="col-md-6 mb-3 mb-md-0">
                 <label class="text-black" for="fname">Name</label>
@@ -190,7 +240,7 @@
                 ></textarea>
               </div>
             </div>
-            <div class="row form-group">
+            <div class="row form-group text-center">
               <div class="col-md-12">
                 <input type="submit" value="Send Message" class="btn btn-primary mr-2 mb-2">
               </div>
@@ -199,98 +249,291 @@
         </div>
       </div>
     </section>
-    <!-- Footer Section -->
-    <footer class="fydi-footer">
-      <div class="container">
-        <div class="row">
-          <!-- Location -->
-          <div class="col-md-4">
-            <p class="footer-title">Location</p>
-            <ul class="footer-ul">
-              <li class="footer-li">
-                <i class="bi bi-geo-alt-fill"></i>
-                &nbsp;
-              17592 E 17th St, Suite 250
-                <br>
-                &nbsp; &nbsp; &nbsp; &nbsp; Tustin, CA 92780 USA
-              </li>
-              <li class="footer-li">
-                <i class="bi bi-envelope"></i>
-                &nbsp;
-              business@fydiglobal.com
-              </li>
-            </ul>
+    <section id="">
+
+    </section>
+          <!-- simple form  -->
+          <section id="contact-form" class="pr-bg-section">
+            <div class="d-flex justify-content-center align-items-center mb-80px">
+              <h3>Let our expert shows you a demo.</h3>
+            </div>
+            <div class="container">
+              <div class="row">
+                <form>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-3 col-sm-12">
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Enter your name"
+                        >
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-12">
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Enter your email"
+                        >
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-12">
+                      <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="phone"
+                          placeholder="Enter your phone number"
+                        >
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label for="interests">Services Interests</label>
+                        <div class="row">
+                          <div class="col-lg-2 col-md-3 col-sm-6">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="bpo">
+                              <label class="form-check-label" for="bpo">
+                                BPO
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-lg-2 col-md-3 col-sm-6">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="Telemarketing">
+                              <label class="form-check-label" for="Telemarketing">
+                                Telemarketing
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-lg-2 col-md-3 col-sm-6">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="CallCenter">
+                              <label class="form-check-label" for="CallCenter">
+                                Call Center
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-lg-2 col-md-3 col-sm-6">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="DebtCollection">
+                              <label class="form-check-label" for="DebtCollection">
+                                Debt Collection
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-lg-2 col-md-3 col-sm-6">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="OnlineCS">
+                              <label class="form-check-label" for="OnlineCS">
+                                Online Customer Services
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-lg-2 col-md-3 col-sm-6">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="ContentReview">
+                              <label class="form-check-label" for="ContentReview">
+                                Content Review
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          rows="4"
+                          placeholder="Enter your message"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12 text-center">
+                      <button type="submit" class="btn btn-secondary">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <!-- Modal Form -->
+          <div
+            class="modal fade"
+            id="demoModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="demoModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="demoModalLabel">Request Demo/Quote</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <!-- Your demo request form goes here -->
+                  <p>Fill out the form below to request a demo/quote:</p>
+                  <form>
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Enter your name"
+                      >
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter email"
+                      >
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Phone</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="phone"
+                        placeholder="Enter Phone"
+                      >
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Social Media -->
-          <div class="col-md-4">
-            <p class="footer-title">Follow Us</p>
-            <ul class="footer-ul inline-ul">
-              <li class="footer-li">
-                <a href="https://www.instagram.com/businessfydiglobal/" target="_blank">
-                  <i class="bi bi-instagram"></i>
-                </a>
-              </li>
-              <li class="footer-li">
-                <a href="https://www.facebook.com/people/FYDI/100092486293971/" target="_blank">
-                  <i class="bi bi-facebook"></i>
-                </a>
-              </li>
-              <li class="footer-li">
-                <a href="https://www.linkedin.com/company/fydiglobal/" target="_blank">
-                  <i class="bi bi-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- Side Links -->
-          <div class="col-md-4">
-            <p class="footer-title">Links</p>
-            <ul class="footer-ul">
-              <li class="footer-li">
-                <a href="/">Home</a>
-              </li>
-              <li class="footer-li">
-                <a href="./company-profile">Company Profile</a>
-              </li>
-              <li class="footer-li services">
-                Services
-                <!-- Submenu -->
-                <ul class="submenu footer-submenu">
-                  <li>
-                    <a href="./services/bpo.html">BPO Services</a>
-                  </li>
-                  <li>
-                    <a href="./services/telemarketing.html">Telemarketing</a>
-                  </li>
-                  <li>
-                    <a href="./services/call-center.html">Call Center</a>
-                  </li>
-                  <li>
-                    <a href="./services/debt-collection.html">
-                      Debt Collection
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./services/content-review.html">Content Review</a>
-                  </li>
-                  <li>
-                    <a href="./services/customer-services.html">Customer Services</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer-li">
-                <a href="/contact-us">Contact</a>
-              </li>
-            </ul>
-          </div>
+          <!-- end of modal  -->
+              <!-- fixed buttons - quick access -->
+        <div class="button-container">
+          <button class="fixed-button btn-secondary first-btn">
+            <a href="tel:+16572358849">Call Us</a>
+          </button>
+          <button class="fixed-button btn-secondary second-btn">
+            <a href="mailto:business@fydiglobal.com" target="_blank">
+              Email Us
+            </a>
+          </button>
+          <button class="fixed-button btn-secondary last-btn" data-toggle="modal" data-target="#demoModal">
+            Inquire
+          </button>
         </div>
-        <p class="text-center" style="margin-top: 1rem;">
-          &copy;
-          <script>document.write(new Date().getFullYear())</script>
-          Fydi Global. All rights reserved.
-        </p>
-      </div>
-    </footer>
+          <!-- Footer Section -->
+          <footer class="fydi-footer">
+            <div class="container">
+              <div class="row">
+                <!-- Location -->
+                <div class="col-md-3 col-sm-6">
+                  <p class="footer-title">Location</p>
+                  <ul class="footer-ul">
+                    <li class="footer-li">
+                      <!-- <i class="bi bi-geo-alt-fill"></i>
+                    &nbsp; -->
+                      17592 E 17th St, Suite 250
+                      <br>
+                      Tustin, CA 92780 USA
+                    </li>
+                    <li class="footer-li">
+                      <!-- <i class="bi bi-envelope"></i>
+                    &nbsp; -->
+                      business@fydiglobal.com
+                    </li>
+                  </ul>
+                </div>
+                <!-- Social Media -->
+                <div class="col-md-3 col-sm-6">
+                  <p class="footer-title">Follow Us</p>
+                  <ul class="footer-ul inline-ul">
+                    <li class="footer-li">
+                      <a href="https://www.instagram.com/businessfydiglobal/" target="_blank">
+                        <i class="bi bi-instagram"></i>
+                      </a>
+                    </li>
+                    <li class="footer-li">
+                      <a href="https://www.facebook.com/people/FYDI/100092486293971/" target="_blank">
+                        <i class="bi bi-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="footer-li">
+                      <a href="https://www.linkedin.com/company/fydiglobal/" target="_blank">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Side Links -->
+                <div class="col-md-3 col-sm-6">
+                  <p class="footer-title">Links</p>
+                  <ul class="footer-ul">
+                    <li class="footer-li">
+                      <a href="/">Home</a>
+                    </li>
+                    <li class="footer-li">
+                      <a href="./company-profile">Company Profile</a>
+                    </li>
+                    <li class="footer-li">
+                      <a href="/contact-us">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Services Links -->
+                <div class="col-md-3 col-sm-6">
+                  <p class="footer-title">Our Services</p>
+                  <ul class="footer-ul">
+                    <li class="footer-li">
+                      <a href="./services/bpo.html">BPO Services</a>
+                    </li>
+                    <li class="footer-li">
+                      <a href="./services/telemarketing.html">Telemarketing</a>
+                    </li>
+                    <li class="footer-li">
+                      <a href="./services/call-center.html">Call Center</a>
+                    </li>
+                    <li class="footer-li">
+                      <a href="./services/debt-collection.html">
+                        Debt Collection
+                      </a>
+                    </li>
+                    <li class="footer-li">
+                      <a href="./services/content-review.html">Content Review</a>
+                    </li>
+                    <li class="footer-li">
+                      <a href="./services/customer-services.html">Customer Services</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="text-center" style="margin-top: 1rem;">
+                &copy;
+                <script>document.write(new Date().getFullYear())</script>
+                Fydi Global. All rights reserved.
+              </p>
+            </div>
+          </footer>
     <!-- live chat embed  -->
     <!-- Start of LiveChat (www.livechat.com) code -->
     <script>
