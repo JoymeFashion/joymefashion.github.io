@@ -404,6 +404,31 @@ section{
 #social-responsibility h3{
     color: var(--primary-color);
 }
+#once-popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    text-align: center;
+    z-index: 10000;
+}
+#once-popup .inner {
+    background: var(--secondary-color);
+    color: white;
+    padding: 20px;
+    width: 600px;
+    max-width: 90%;
+    margin: 50px auto;
+    }
+#once-popup #popup-close {
+    float: right;
+    font-size: 30px;
+    line-height: 10px;
+    padding: 5px;
+    cursor: pointer;
+    }
 @media screen and (min-width: 960px) {
     #hero{
         min-height: 500px;
@@ -501,6 +526,9 @@ section{
     .how-title h1{
         font-size: 22px;
     }
+    .ad-ul{
+        padding-left: 0%;
+    }
     .ad-ul li{
         font-size: 14px;
     }
@@ -510,4 +538,7 @@ section{
     #fydi-24-7-call-center h5{
         color: var(--primary-color);
     }
+#once-popup .inner {
+    margin-top: 30%;
+}
 }
