@@ -504,4 +504,10 @@ section{
     .ad-ul li{
         font-size: 14px;
     }
+    #call-center .text{
+        text-align: left;
+    }
+    #fydi-24-7-call-center h5{
+        color: var(--primary-color);
+    }
 }
