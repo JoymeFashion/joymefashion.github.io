@@ -4,17 +4,18 @@
     <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="World-Class Customer Experience. Your Trusted BPO Partner for CX Optimization and Multilingual Excellence in 12 Languages.  From multilingual customer support to efficient back-office operations. Experience the world of possibilities with FYDI today!">
+    <meta name="description" content="FYDI is your trusted BPO partner for CX Optimization and Multilingual Excellence in 12 Languages.  From multilingual customer support to efficient back-office operations. Experience the world of possibilities with FYDI today!">
     <!-- Title -->
     <title>BPO Services at FYDI</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../imgs/fydi_logo.jpeg">
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../fydi.css">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../media.css">
+    <link rel="stylesheet" href="../css/float-anim.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../media.css">
+    <link rel="stylesheet" href="../fydi.css">
+    <link rel="stylesheet" href="../style.css">
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -51,17 +52,17 @@
         <!-- Navbar Collapse -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <!-- Navbar Items -->
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav nav-ul-ml">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">
+              <a class="nav-link" href="#">
                 Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../company-profile">Company Profile</a>
-            </li>
             <li class="nav-item active">
+              <a class="nav-link" href="./company-profile">Company Profile</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link services">
                 Services
                 <i class="bi bi-caret-down"></i>
@@ -78,7 +79,9 @@
                   <a href="./call-center.html">Call Center</a>
                 </li>
                 <li>
-                  <a href="./debt-collection.html">Debt Collection</a>
+                  <a href="./debt-collection.html">
+                    Debt Collection
+                  </a>
                 </li>
                 <li>
                   <a href="./content-review.html">Content Review</a>
@@ -88,36 +91,118 @@
                 </li>
               </ul>
             </li>
+            <li class="nav-item"></li>
             <li class="nav-item">
               <a class="nav-link" href="#">Languages</a>
               <ul class="submenu">
                 <li>
                   <a href="https://zh.fydiglobal.com/">中文</a>
                 </li>
+                <li>
+                  Español
+                </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../contact-us">Contact</a>
+              <a class="nav-link" href="./contact-us">
+                Contact Us
+              </a>
             </li>
             <!-- <li class="nav-item">
               <button class="btn btn-primary" style="margin-left: 1rem;">Online Consults</button>
             </li> -->
           </ul>
+          <!-- right btns  -->
+          <div class="header-right flex">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#demoModal">
+              Request A Demo
+            </button>
+            <i class="bi bi-telephone"></i>
+            <a href="tel:+16572358849">
+              <b>+1(657)235-8849</b>
+            </a>
+          </div>
         </div>
       </nav>
     </header>
-    <section id="bpo">
-      <div class="d-flex justify-content-center align-items-center mb-80px">
-        <h1>BPO Services at FYDI</h1>
+    <!-- Hero Section -->
+    <section id="hero" class="pr-bg-section bpo">
+      <!-- Hero Container -->
+      <div class="container">
+        <!-- Hero Row -->
+        <div class="row align-items-center justify-content-center hero-wrapper">
+          <!-- Left Side Div -->
+          <div class="col-md-7 align-items-center justify-content-center p-6">
+            <div class="bpo-intro">
+              <h3>
+                BPO Services At FYDI
+              </h3>
+              <p class="intro-text">
+                Welcome to our BPO services, where we excel in delivering world-class outsourcing solutions.
+              </p>
+              <button class="btn btn-secondary" data-toggle="modal" data-target="#demoModal">
+                Get Started
+              </button>
+            </div>
+            <div class="highlights flex-highlights mt-5">
+              <div class="li-block">
+                <div class="top-number">
+                  12
+                </div>
+                <div class="bt-text">
+                  Languages
+                </div>
+              </div>
+              <div class="li-block">
+                <div class="top-number">
+                  100+
+                </div>
+                <div class="bt-text">
+                  Happy Clients
+                </div>
+              </div>
+              <div class="li-block">
+                <div class="top-number">
+                  4,000 +
+                </div>
+                <div class="bt-text">
+                  Professionals
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Right Side Div -->
+          <div class="col-md-5 d-md-block d-none mt-5">
+            <img src="../imgs/services/bpo.png" alt="Image" class="img-fluid img-circle">
+          </div>
+        </div>
       </div>
+    </section>
+    <section id="bpo">
       <div class="container">
         <div class="row">
-          <h4>Leverage Your Resources With Us</h4>
-          <p>
-            Welcome to our BPO services, where we excel in delivering world-class outsourcing solutions. With a focus on customer experience optimization, we are your trusted partner for multilingual excellence in
-            <b>12 languages</b>
-            . From efficient back-office operations to multilingual customer support, we offer a world of possibilities. Our highly skilled team ensures precision and expertise in every task, enhancing the overall quality of your services. With a strong emphasis on data security and compliance, we prioritize personalized solutions, empowering your business's growth and financial recovery with integrity. Let us be your strategic BPO partner as we strive to exceed your expectations and Fullfil your dreams internationally.
-          </p>
+          <div class="col-lg-5 mt-5">
+            <h3>
+              Leverage Your resources
+              <br>
+              Boost Your Sales
+              <br>
+              Improve Customer Satisfaction
+            </h3>
+            <button class="btn btn-primary">
+              Get A Quote
+            </button>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              With a focus on customer experience optimization, we are your trusted partner for multilingual excellence in
+              <b>12 languages</b>
+              . From efficient back-office operations to multilingual customer support, we offer a world of possibilities. Our highly skilled team ensures precision and expertise in every task, enhancing the overall quality of your services.
+              <br>
+              <br>
+              With a strong emphasis on data security and compliance, we prioritize personalized solutions, empowering your business's growth and financial recovery with integrity. Let us be your strategic BPO partner as we strive to exceed your expectations and Fullfil your dreams internationally.
+            </p>
+          </div>
           <p>
             <!-- Cost-efficiency is another significant benefit of BPO. By outsourcing tasks to regions with lower labor costs, businesses can achieve substantial savings while maintaining quality standards. Moreover, BPO providers often implement cutting-edge technologies and streamlined processes, leading to enhanced efficiency and productivity.
 
@@ -127,78 +212,309 @@ Furthermore, BPO services enable businesses to scale their operations swiftly an
 
 Ultimately, partnering with a reputable BPO company empowers businesses to streamline their operations, improve service quality, and achieve significant cost savings. It's a strategic move that fosters growth, innovation, and long-term success in the dynamic business landscape. --></p>
         </div>
+        
+      </div>
+    </section>
+    <section id="how-best-bpo">
+      <div class="container">
+        <div class="row mt-5 p-5 how-title">
+          <div class="col-lg-9 col-md-12">
+            <h1>How We Provide the Best BPO Services</h1>
+          </div>
+          <div class="col-lg-3">
+            <button class="btn btn-primary">Request A Quote</button>
+          </div>
+        </div>
         <div class="row">
-          <div class="col-sm-12 col-md-4">
-            <div class="ad-icon">
-              <i class="bi bi-person-check fydi-ad-icon"></i>
+          <div class="col-lg-4 how-li">
+            <div class="company-subtitle">
+              <b>All around the world</b>
             </div>
-            <div class="ad-text">
-              <div class="ad-title">
-                <b></b>
-              </div>
-              <div class="text">
-                <!-- With our BPO services, focus on core competencies, redirect resources to innovation. Access skilled professionals, avoid in-house training and recruitment efforts. -->
-                Outsource with us to focus on core competencies, access skilled professionals, and eliminate recruitment efforts. Channel resources into innovation and strategic initiatives.
-              </div>
+            <div class="intro-text">
+              We have call centers all over the world, so you’ll never experience an interruption in connectivity.
             </div>
           </div>
-          <div class="col-sm-12 col-md-4">
-            <div class="ad-icon">
-              <i class="bi bi-cash-coin fydi-ad-icon"></i>
+          <div class="col-lg-4 how-li">
+            <div class="company-subtitle">
+              <b>24/7/365</b>
             </div>
-            <div class="ad-text">
-              <div class="ad-title">
-                <b></b>
-              </div>
-              <div class="text">
-                Our BPO service offers cost-efficiency by outsourcing to regions with lower labor costs, ensuring substantial savings without compromising quality. Utilizing cutting-edge technologies and streamlined processes further enhances efficiency and productivity.
-                <!-- Cost-efficiency is another significant benefit of our BPO service.  -->
-                <!-- By outsourcing tasks to regions with lower labor costs, you can achieve substantial savings while maintaining quality standards.  -->
-                <!-- Moreover, we implement cutting-edge technologies and streamlined processes, leading to enhanced efficiency and productivity. -->
-              </div>
+            <div class="intro-text">
+              Our customer support is available 24/7/365, ensuring your clients can reach us anytime, day or night, all year round.
             </div>
           </div>
-          <div class="col-sm-12 col-md-4">
-            <div class="ad-icon">
-              <i class="bi bi-speedometer2 fydi-ad-icon"></i>
+          <div class="col-lg-4 how-li">
+            <div class="company-subtitle">
+              <b>Multilingual</b>
             </div>
-            <div class="ad-text">
-              <div class="ad-title">
-                <b></b>
-              </div>
-              <div class="text">
-                Our BPO services enable you to scale your operations swiftly and adapt to fluctuating demands without the burden of heavy infrastructure investments. 
-                You cann respond effectively to market changes and stay ahead of the competition.
-              </div>
+            <div class="intro-text">
+              We provide BPO services with support for 12+ languages to cater to diverse global markets.
+            </div>
+          </div>
+        </div>    
+      </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <div class="ad-icon">
+            <i class="bi bi-person-check fydi-ad-icon"></i>
+          </div>
+          <div class="ad-text">
+            <div class="ad-title">
+              <b></b>
+            </div>
+            <div class="text">
+              <!-- With our BPO services, focus on core competencies, redirect resources to innovation. Access skilled professionals, avoid in-house training and recruitment efforts. -->
+              Outsource with us to focus on core competencies, access skilled professionals, and eliminate recruitment efforts. Channel resources into innovation and strategic initiatives.
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="ad-icon">
+            <i class="bi bi-cash-coin fydi-ad-icon"></i>
+          </div>
+          <div class="ad-text">
+            <div class="ad-title">
+              <b></b>
+            </div>
+            <div class="text">
+              Our BPO service offers cost-efficiency by outsourcing to regions with lower labor costs, ensuring substantial savings without compromising quality. Utilizing cutting-edge technologies and streamlined processes further enhances efficiency and productivity.
+              <!-- Cost-efficiency is another significant benefit of our BPO service.  -->
+              <!-- By outsourcing tasks to regions with lower labor costs, you can achieve substantial savings while maintaining quality standards.  -->
+              <!-- Moreover, we implement cutting-edge technologies and streamlined processes, leading to enhanced efficiency and productivity. -->
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="ad-icon">
+            <i class="bi bi-speedometer2 fydi-ad-icon"></i>
+          </div>
+          <div class="ad-text">
+            <div class="ad-title">
+              <b></b>
+            </div>
+            <div class="text">
+              Our BPO services enable you to scale your operations swiftly and adapt to fluctuating demands without the burden of heavy infrastructure investments. 
+              You cann respond effectively to market changes and stay ahead of the competition.
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- simple form  -->
+    <section id="contact-form" class="pr-bg-section">
+      <div class="d-flex justify-content-center align-items-center mb-80px">
+        <h3>Let our expert shows you a demo.</h3>
+      </div>
+      <div class="container">
+        <div class="row">
+          <form>
+            <div class="row">
+              <div class="col-lg-4 col-md-3 col-sm-12">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter your name"
+                  >
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-3 col-sm-12">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                  >
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-3 col-sm-12">
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                  >
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="interests">Services Interests</label>
+                  <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="bpo">
+                        <label class="form-check-label" for="bpo">
+                          BPO
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="Telemarketing">
+                        <label class="form-check-label" for="Telemarketing">
+                          Telemarketing
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="CallCenter">
+                        <label class="form-check-label" for="CallCenter">
+                          Call Center
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="DebtCollection">
+                        <label class="form-check-label" for="DebtCollection">
+                          Debt Collection
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="OnlineCS">
+                        <label class="form-check-label" for="OnlineCS">
+                          Online Customer Services
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="ContentReview">
+                        <label class="form-check-label" for="ContentReview">
+                          Content Review
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="4"
+                    placeholder="Enter your message"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-secondary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Modal Form -->
+    <div
+      class="modal fade"
+      id="demoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="demoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="demoModalLabel">Request Demo/Quote</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Your demo request form goes here -->
+            <p>Fill out the form below to request a demo/quote:</p>
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                >
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                >
+              </div>
+              <div class="form-group">
+                <label for="email">Phone</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter Phone"
+                >
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of modal  -->
+    <!-- fixed buttons - quick access -->
+    <div class="button-container">
+      <button class="fixed-button btn-secondary first-btn">
+        <a href="tel:+16572358849">Call Us</a>
+      </button>
+      <button class="fixed-button btn-secondary second-btn">
+        <a href="mailto:business@fydiglobal.com" target="_blank">
+          Email Us
+        </a>
+      </button>
+      <button class="fixed-button btn-secondary last-btn" data-toggle="modal" data-target="#demoModal">
+        Inquire
+      </button>
+    </div>
     <!-- Footer Section -->
     <footer class="fydi-footer">
       <div class="container">
         <div class="row">
           <!-- Location -->
-          <div class="col-md-4">
+          <div class="col-md-3 col-sm-6">
             <p class="footer-title">Location</p>
             <ul class="footer-ul">
               <li class="footer-li">
-                <i class="bi bi-geo-alt-fill"></i>
-                &nbsp;
-              17592 E 17th St, Suite 250
+                <!-- <i class="bi bi-geo-alt-fill"></i>
+              &nbsp; -->
+                17592 E 17th St, Suite 250
                 <br>
-                &nbsp; &nbsp; &nbsp; &nbsp; Tustin, CA 92780 USA
+                Tustin, CA 92780 USA
               </li>
               <li class="footer-li">
-                <i class="bi bi-envelope"></i>
-                &nbsp;
-              business@fydiglobal.com
+                <!-- <i class="bi bi-envelope"></i>
+              &nbsp; -->
+                business@fydiglobal.com
               </li>
             </ul>
           </div>
           <!-- Social Media -->
-          <div class="col-md-4">
+          <div class="col-md-3 col-sm-6">
             <p class="footer-title">Follow Us</p>
             <ul class="footer-ul inline-ul">
               <li class="footer-li">
@@ -219,43 +535,43 @@ Ultimately, partnering with a reputable BPO company empowers businesses to strea
             </ul>
           </div>
           <!-- Side Links -->
-          <div class="col-md-4">
+          <div class="col-md-3 col-sm-6">
             <p class="footer-title">Links</p>
             <ul class="footer-ul">
               <li class="footer-li">
                 <a href="/">Home</a>
               </li>
               <li class="footer-li">
-                <a href="../company-profile">Company Profile</a>
-              </li>
-              <li class="footer-li services">
-                Services
-                <!-- Submenu -->
-                <ul class="submenu footer-submenu">
-                  <li>
-                    <a href="#">BPO Services</a>
-                  </li>
-                  <li>
-                    <a href="./telemarketing.html">Telemarketing</a>
-                  </li>
-                  <li>
-                    <a href="./call-center.html">Call Center</a>
-                  </li>
-                  <li>
-                    <a href="./debt-collection.html">
-                      Debt Collection
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./content-review.html">Content Review</a>
-                  </li>
-                  <li>
-                    <a href="./customer-services.html">Customer Services</a>
-                  </li>
-                </ul>
+                <a href="./company-profile">Company Profile</a>
               </li>
               <li class="footer-li">
-                <a href="../contact-us">Contact</a>
+                <a href="/contact-us">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Services Links -->
+          <div class="col-md-3 col-sm-6">
+            <p class="footer-title">Our Services</p>
+            <ul class="footer-ul">
+              <li class="footer-li">
+                <a href="./bpo.html">BPO Services</a>
+              </li>
+              <li class="footer-li">
+                <a href="./telemarketing.html">Telemarketing</a>
+              </li>
+              <li class="footer-li">
+                <a href="./call-center.html">Call Center</a>
+              </li>
+              <li class="footer-li">
+                <a href="./debt-collection.html">
+                  Debt Collection
+                </a>
+              </li>
+              <li class="footer-li">
+                <a href="./content-review.html">Content Review</a>
+              </li>
+              <li class="footer-li">
+                <a href="./customer-services.html">Customer Services</a>
               </li>
             </ul>
           </div>

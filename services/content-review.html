@@ -10,11 +10,10 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../imgs/fydi_logo.jpeg">
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../fydi.css">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../media.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../fydi.css">
+    <link rel="stylesheet" href="../style.css">
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -51,17 +50,17 @@
         <!-- Navbar Collapse -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <!-- Navbar Items -->
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav nav-ul-ml">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">
+              <a class="nav-link" href="#">
                 Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../company-profile">Company Profile</a>
-            </li>
             <li class="nav-item active">
+              <a class="nav-link" href="./company-profile">Company Profile</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link services">
                 Services
                 <i class="bi bi-caret-down"></i>
@@ -78,52 +77,93 @@
                   <a href="./call-center.html">Call Center</a>
                 </li>
                 <li>
-                  <a href="./debt-collection.html">Debt Collection</a>
+                  <a href="./debt-collection.html">
+                    Debt Collection
+                  </a>
                 </li>
                 <li>
                   <a href="./content-review.html">Content Review</a>
                 </li>
+                <li>
+                  <a href="./customer-services.html">Customer Services</a>
+                </li>
               </ul>
             </li>
+            <li class="nav-item"></li>
             <li class="nav-item">
               <a class="nav-link" href="#">Languages</a>
               <ul class="submenu">
                 <li>
                   <a href="https://zh.fydiglobal.com/">中文</a>
                 </li>
+                <li>
+                  Español
+                </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../contact-us">Contact</a>
+              <a class="nav-link" href="./contact-us">
+                Contact Us
+              </a>
             </li>
             <!-- <li class="nav-item">
-          <button class="btn btn-primary" style="margin-left: 1rem;">Online Consults</button>
-        </li> -->
+              <button class="btn btn-primary" style="margin-left: 1rem;">Online Consults</button>
+            </li> -->
           </ul>
+          <!-- right btns  -->
+          <div class="header-right flex">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#demoModal">
+              Request A Demo
+            </button>
+            <i class="bi bi-telephone"></i>
+            <a href="tel:+16572358849">
+              <b>+1(657)235-8849</b>
+            </a>
+          </div>
         </div>
       </nav>
     </header>
-    <section>
+    <section id="debt-collect-ad " class="pr-bg-section">
       <div class="container">
         <div class="row">
-          <h2>Enhance Your Content Quality with Our Expert Review Service</h2>
-          <p>
-            At FYDI, we offer comprehensive Content Review Services to ensure that your content
-            meets the highest standards of quality, accuracy, and relevance. Our team of experienced content reviewers
-            meticulously assesses and refines your materials, enhancing their impact and effectiveness.
-          </p>
-          <p>
-            Whether it's website content, marketing materials, blog posts, or any other written content, we specialize in
-            identifying areas for improvement and providing valuable insights to elevate your content strategy.
-            Partner with us to optimize your message, engage your audience, and achieve your content goals.
-          </p>
+          <div class="col-lg-4 p-5">
+            <h4>Enhance Your Content Quality with Our Expert Review Service</h4>
+            <button class="btn btn-secondary">
+              Get A Quote
+            </button>
+          </div>
+          <div class="col-lg-8">
+            <p>
+              At FYDI, we offer comprehensive Content Review Services to ensure that your content
+              meets the highest standards of quality, accuracy, and relevance. Our team of experienced content reviewers
+              meticulously assesses and refines your materials, enhancing their impact and effectiveness.
+            </p>
+            <p>
+              Whether it's website content, marketing materials, blog posts, or any other written content, we specialize in
+              identifying areas for improvement and providing valuable insights to elevate your content strategy.
+              Partner with us to optimize your message, engage your audience, and achieve your content goals.
+            </p>
+          </div>
         </div>
       </div>
     </section>
+
     <section>
       <div class="container">
         <h2>Advantages of Our Content Review Service</h2>
-        <div class="row">
+        <div class="row d-flex justify-content-center align-items-center">
+         <div class="col-lg-4 ">
+          <div class="img-circle-wrap">
+            <img src="../imgs/aboutus/profile_1.png" alt="" class="img-fluid img-circle">
+            <div class="badge badge-on-right">
+              <i class="bi bi-telephone"></i>
+              Call Us:
+              <br>
+              +1(657)235-8849
+            </div>
+          </div>
+         </div>
+         <div class="col-lg-8">
           <ul class="ad-ul">
             <li>Thorough assessment and refinement of content</li>
             <li>Enhanced quality, accuracy, and relevance</li>
@@ -136,37 +176,227 @@
             <li>Competitive pricing and flexible service packages</li>
             <li>Commitment to confidentiality and data security</li>
           </ul>
+         </div>
         </div>
         <h5>
           <a href="../contact-us.html">Grow Your Business With Us.</a>
         </h5>
       </div>
     </section>
-    <!-- Footer Section -->
+    <!-- simple form  -->
+    <section id="contact-form" class="pr-bg-section">
+      <div class="d-flex justify-content-center align-items-center mb-80px">
+        <h3>Let our expert shows you a demo.</h3>
+      </div>
+      <div class="container">
+        <div class="row">
+          <form>
+            <div class="row">
+              <div class="col-lg-4 col-md-3 col-sm-12">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter your name"
+                  >
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-3 col-sm-12">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                  >
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-3 col-sm-12">
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                  >
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="interests">Services Interests</label>
+                  <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="bpo">
+                        <label class="form-check-label" for="bpo">
+                          BPO
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="Telemarketing">
+                        <label class="form-check-label" for="Telemarketing">
+                          Telemarketing
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="CallCenter">
+                        <label class="form-check-label" for="CallCenter">
+                          Call Center
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="DebtCollection">
+                        <label class="form-check-label" for="DebtCollection">
+                          Debt Collection
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="OnlineCS">
+                        <label class="form-check-label" for="OnlineCS">
+                          Online Customer Services
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="ContentReview">
+                        <label class="form-check-label" for="ContentReview">
+                          Content Review
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="4"
+                    placeholder="Enter your message"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-secondary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Modal Form -->
+    <div
+      class="modal fade"
+      id="demoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="demoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="demoModalLabel">Request Demo/Quote</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Your demo request form goes here -->
+            <p>Fill out the form below to request a demo/quote:</p>
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                >
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                >
+              </div>
+              <div class="form-group">
+                <label for="email">Phone</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter Phone"
+                >
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of modal  -->
+    <!-- fixed buttons - quick access -->
+    <div class="button-container">
+      <button class="fixed-button btn-secondary first-btn">
+        <a href="tel:+16572358849">Call Us</a>
+      </button>
+      <button class="fixed-button btn-secondary second-btn">
+        <a href="mailto:business@fydiglobal.com" target="_blank">
+          Email Us
+        </a>
+      </button>
+      <button class="fixed-button btn-secondary last-btn" data-toggle="modal" data-target="#demoModal">
+        Inquire
+      </button>
+    </div>
     <!-- Footer Section -->
     <footer class="fydi-footer">
       <div class="container">
         <div class="row">
           <!-- Location -->
-          <div class="col-md-4">
+          <div class="col-md-3 col-sm-6">
             <p class="footer-title">Location</p>
             <ul class="footer-ul">
               <li class="footer-li">
-                <i class="bi bi-geo-alt-fill"></i>
-                &nbsp;
-              17592 E 17th St, Suite 250
+                <!-- <i class="bi bi-geo-alt-fill"></i>
+              &nbsp; -->
+                17592 E 17th St, Suite 250
                 <br>
-                &nbsp; &nbsp; &nbsp; &nbsp; Tustin, CA 92780 USA
+                Tustin, CA 92780 USA
               </li>
               <li class="footer-li">
-                <i class="bi bi-envelope"></i>
-                &nbsp;
-              business@fydiglobal.com
+                <!-- <i class="bi bi-envelope"></i>
+              &nbsp; -->
+                business@fydiglobal.com
               </li>
             </ul>
           </div>
           <!-- Social Media -->
-          <div class="col-md-4">
+          <div class="col-md-3 col-sm-6">
             <p class="footer-title">Follow Us</p>
             <ul class="footer-ul inline-ul">
               <li class="footer-li">
@@ -187,40 +417,43 @@
             </ul>
           </div>
           <!-- Side Links -->
-          <div class="col-md-4">
+          <div class="col-md-3 col-sm-6">
             <p class="footer-title">Links</p>
             <ul class="footer-ul">
               <li class="footer-li">
                 <a href="/">Home</a>
               </li>
               <li class="footer-li">
-                <a href="../company-profile">Company Profile</a>
-              </li>
-              <li class="footer-li services">
-                Services
-                <!-- Submenu -->
-                <ul class="submenu footer-submenu">
-                  <li>
-                    <a href="./bpo.html">BPO Services</a>
-                  </li>
-                  <li>
-                    <a href="./telemarketing.html">Telemarketing</a>
-                  </li>
-                  <li>
-                    <a href="./call-center.html">Call Center</a>
-                  </li>
-                  <li>
-                    <a href="./debt-collection.html">
-                      Debt Collection
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Content Review</a>
-                  </li>
-                </ul>
+                <a href="./company-profile">Company Profile</a>
               </li>
               <li class="footer-li">
-                <a href="/contact-us">Contact</a>
+                <a href="/contact-us">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Services Links -->
+          <div class="col-md-3 col-sm-6">
+            <p class="footer-title">Our Services</p>
+            <ul class="footer-ul">
+              <li class="footer-li">
+                <a href="./bpo.html">BPO Services</a>
+              </li>
+              <li class="footer-li">
+                <a href="./telemarketing.html">Telemarketing</a>
+              </li>
+              <li class="footer-li">
+                <a href="./call-center.html">Call Center</a>
+              </li>
+              <li class="footer-li">
+                <a href="./debt-collection.html">
+                  Debt Collection
+                </a>
+              </li>
+              <li class="footer-li">
+                <a href="./content-review.html">Content Review</a>
+              </li>
+              <li class="footer-li">
+                <a href="./customer-services.html">Customer Services</a>
               </li>
             </ul>
           </div>
