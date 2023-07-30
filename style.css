@@ -197,10 +197,6 @@ section{
 .highlights{
     font-size: 20px;
 }
-
-.highlights .li-block{
-    width: 33%;
-}
 .li-block .top-number{
     font-size: 28px;
     font-weight: 500;
@@ -239,7 +235,7 @@ section{
 }
 .form-border{
     border: 1px solid var(--primary-color);
-    border-radius: 5%;
+    border-radius: 10px;
 }
 #locations{
     background-image: url(./imgs/aboutus/map.webp);
@@ -405,6 +401,9 @@ section{
 .round-corner{
     border-radius: 10px;
 }
+#social-responsibility h3{
+    color: var(--primary-color);
+}
 @media screen and (min-width: 960px) {
     #hero{
         min-height: 500px;
@@ -418,6 +417,9 @@ section{
     }
     .flex-highlights{
         display: flex;
+    }
+    .highlights .li-block{
+        width: 33%;
     }
 }
 @media screen and (max-width: 959px) {
@@ -435,6 +437,9 @@ section{
     }
 }
 @media screen and (max-width:767px) {
+    section{
+        padding: 20px;
+    }
     .span-text{
         padding-top: 50px;
         padding-left: 0%;
@@ -443,6 +448,10 @@ section{
     }
     #hero{
         text-align: center;
+    }
+    #company-intro p{
+        font-size: 14px;
+        line-height: 22px;
     }
     .mission-li{
         padding: 0%;
@@ -462,5 +471,34 @@ section{
     }
     .message-container a{
         display: block;
+    }
+    #social-responsibility h3{
+        font-size: 18px;
+    }
+    #social-responsibility p{
+        font-size: 12px;
+    }
+    .right-text b{
+        font-weight: 400;
+        font-size: 20px;
+    }
+    #contact-us form{
+        padding: 1rem !important;
+    }
+    .highlights .li-block{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .li-block .top-number{
+        margin-right: 10px;
+    }
+    #bpo h3{
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--primary-color);
+    }
+    .how-title h1{
+        font-size: 22px;
     }
 }
