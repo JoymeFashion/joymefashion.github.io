@@ -20,6 +20,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./js/float-panel.js"></script>
     <script src="./js/fydi.js"></script>
     <!-- Custom Styles (Embedded in the head) -->
@@ -495,6 +496,54 @@
         </div>
       </div>
     </section>
+    <!-- first time visit pop up form  -->
+    <!-- ONCE SHOWN MODAL -->
+    <div style="display:none" id="once-popup">
+      <div class="inner">
+        <div id="popup-close">×</div>
+        
+        <form action="">
+          <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-lg-7 col-sm-0">
+              <img src="./imgs/aboutus/profile_3.png" alt="" class="img-fluid img-circle col-sm-0">
+            </div>
+            <div class="col-lg-5 col-sm-12">
+              <p style="text-align: left;">
+                If you are still searching around for an BPO/outsourcing company,
+                we are the right one.
+              </p>
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="username"
+                      placeholder="Enter your name"
+                    >
+                  </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                      <label for="name">Email</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="userEmail"
+                        placeholder="Enter your email"
+                      >
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- END ONCE SHOWN MODAL -->
     <!-- simple form  -->
     <section id="contact-form" class="pr-bg-section">
       <div class="d-flex justify-content-center align-items-center mb-80px">
@@ -536,62 +585,6 @@
                 >
               </div>
             </div>
-            <!-- services interests  -->
-            <!-- <div class="col-lg-12">
-              <div class="form-group">
-                <label for="interests">Services Interests</label>
-                <div class="row">
-                  <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="bpo">
-                      <label class="form-check-label" for="bpo">
-                        BPO
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="Telemarketing">
-                      <label class="form-check-label" for="Telemarketing">
-                        Telemarketing
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="CallCenter">
-                      <label class="form-check-label" for="CallCenter">
-                        Call Center
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="DebtCollection">
-                      <label class="form-check-label" for="DebtCollection">
-                        Debt Collection
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="OnlineCS">
-                      <label class="form-check-label" for="OnlineCS">
-                        Online Customer Services
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="ContentReview">
-                      <label class="form-check-label" for="ContentReview">
-                        Content Review
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
             <div class="col-lg-12">
               <div class="form-group">
                 <label for="message">Message</label>
@@ -791,17 +784,26 @@
     
     });
     fix_message("popupmessage");
+    // pop up form 
+    $(document).ready(function() {
+    if(localStorage.getItem('popState') != 'yes'){
+        $("#once-popup").delay(2000).fadeIn();
+        // localStorage.setItem('popState','shown')
+    }
+    else {
+       // DELETE THIS ELSE ON PRODUCTION
+        console.log('once-popup is allready shown previously')
+    }
 
-    // fixed message when scroll
-    // window.onscroll = function () {
-    //         const messageContainer = document.getElementById('popupmessage');
-    //         const scrollDistance = window.pageYOffset || document.documentElement.scrollTop;
-    //         if (scrollDistance > messageContainer.offsetTop) {
-    //             messageContainer.classList.add('sticky-message');
-    //         } else {
-    //             messageContainer.classList.remove('sticky-message');
-    //         }
-    //     };
+    $('#popup-close').click(function(e) // You are clicking the close button
+    {
+    $('#once-popup').fadeOut(); // Now the pop up is hiden.
+    });
+    $('#once-popup').click(function(e) 
+    {
+    $('#once-popup').fadeOut(); 
+    });
+});
     </script>
     <!-- live chat embed  -->
     <!-- Start of LiveChat (www.livechat.com) code -->
