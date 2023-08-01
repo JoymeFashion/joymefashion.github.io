@@ -108,6 +108,12 @@ section{
 .footer-submenu a, .footer-submenu a:hover{
     color: var(--primary-color);
 }
+.footer-title{
+    color: var(--secondary-color);
+}
+.footer-ul{
+    padding-left: 0%;
+}
 .footer-ul .services:hover .submenu{
     display: block;
 }
@@ -390,7 +396,10 @@ section{
     /* color: var(--primary-color); */
   }
 #hero{
-    /* background-image: url(./imgs/banners/bg.jpg); */
+    /* background-image: url(./imgs/services/service1bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right; */
 }
 .mt-n5{
     margin-top: -5rem;
@@ -429,6 +438,12 @@ section{
     padding: 5px;
     cursor: pointer;
     }
+.line-bg{
+    background-image: url(./imgs/services/twocolors.png);
+}
+.mb-pc-20{
+    margin-bottom: 20%;
+}
 @media screen and (min-width: 960px) {
     #hero{
         min-height: 500px;
@@ -438,7 +453,7 @@ section{
         margin-top: 100px;
     }
     .nav-ul-ml{
-        margin-left: 10% !important;
+        /* margin-left: 10% !important; */
     }
     .flex-highlights{
         display: flex;
