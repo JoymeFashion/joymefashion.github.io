@@ -73,9 +73,16 @@ footer{
 .footer-li, .footer-li a{
     text-decoration: none;
     color: white;
+    margin-bottom: 10px;
 }
 .footer-li a:hover{
     color: white;
+}
+.footer-li i{
+    margin-right: 5px;
+}
+.footer-li p{
+    margin-left: 25px;
 }
 .inline-ul .footer-li{
     display: inline;  
