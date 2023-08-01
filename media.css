@@ -87,7 +87,7 @@
     }
 }
 @media (max-width:575.99px) {
-    .footer-li i{
+    .location i{
         display: none;
     }
     .footer-li p{
