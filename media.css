@@ -48,6 +48,12 @@
         background-repeat: no-repeat;
         background-position: right;
     }
+    .mb-80px{
+        margin-bottom: 80px;
+    }
+    .mb-50px{
+        margin-bottom: 80px;
+    }
 }
  /* md or smaller screen  */
 @media screen and (max-width:991.99px) {

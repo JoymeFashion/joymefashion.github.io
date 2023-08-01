@@ -75,9 +75,6 @@ section{
 .service-unit{
     margin-bottom: 60px;
 }
-.mb-80px{
-    margin-bottom: 80px;
-}
 .mb-50px{
     margin-bottom: 50px;
 }
@@ -445,6 +442,14 @@ section{
     margin-bottom: 20%;
 }
 @media screen and (min-width: 960px) {
+    .full-screen-height{
+        min-height: 500px;
+        height: calc(100vh);
+    }
+    .call-center-hero{
+        background-repeat: no-repeat;
+        background-image: url(./imgs/services/call-cs-bg.png);
+    }
     #hero{
         min-height: 500px;
         height: calc(100vh);
