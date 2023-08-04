@@ -7,12 +7,12 @@
     <title>Company Profile</title>
     <link rel="icon" type="image/png" href="./imgs/fydi_logo.jpeg">
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="./media.css">
     <link rel="stylesheet" href="./css/float-anim.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./fydi.css">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./media.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -23,6 +23,7 @@
     </style>
   </head>
   <body>
+    <!-- Header  -->
     <header>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -32,7 +33,7 @@
             src="./imgs/fydi_logo.png"
             width="80"
             height="80"
-            alt=""
+            alt="FYDI Fullfil Your Dreams Internationally Logo"
           >
         </a>
         <!-- Navbar Toggler -->
@@ -106,22 +107,22 @@
                 Contact Us
               </a>
             </li>
-            <!-- <li class="nav-item">
-              <button class="btn btn-primary" style="margin-left: 1rem;">Online Consults</button>
-            </li> -->
+            <li class="nav-item">
+              <button class="btn btn-primary" data-toggle="modal" data-target="#demoModal">
+          Free Quote
+        </button>
+            </li>
           </ul>
-          <!-- right btns  -->
-          <div class="header-right flex">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#demoModal">
-              Free Quote
-            </button>
-            <i class="bi bi-telephone"></i>
-            <a href="tel:+16572358849">
-              <b>+1(657)235-8849</b>
-            </a>
-          </div>
         </div>
+        <!-- right btns  -->
+      <div class="header-right">
+        <i class="bi bi-telephone"></i>
+        <a href="tel:+16572358849">
+          <b>+1(657)235-8849</b>
+        </a>
+      </div>
       </nav>
+      
     </header>
     <!-- Hero Section -->
     <section id="hero" class="pr-bg-section text-center mb-pc-20">
