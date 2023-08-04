@@ -205,7 +205,7 @@ section{
     font-weight: 500;
 }
 .li-block .subtitle{
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
 }
 .bpo{
@@ -436,10 +436,39 @@ section{
     cursor: pointer;
     }
 .line-bg{
-    background-image: url(./imgs/services/twocolors.png);
+    background-image: url(./imgs/services/banner/bannerbg2.png);
 }
 .mb-pc-20{
     margin-bottom: 20%;
+}
+.mb-80px{
+    margin-bottom: 80px;
+}
+.right-corner{
+    position: absolute;
+    right: 20px;
+    top: -100px;
+    z-index: 9999;
+}
+.pr-bg-square{
+    background-color: var(--primary-color);
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+ /* xl screen  */
+@media screen and (min-width: 1200px){
+    .highlights .li-block{
+        width: 33%;
+    }
+}
+ /* lg screen  */
+@media screen and (min-width: 992px) {
+    .flex-highlights{
+        display: flex;
+    }
+
 }
 @media screen and (min-width: 960px) {
     .full-screen-height{
@@ -448,7 +477,8 @@ section{
     }
     .call-center-hero{
         background-repeat: no-repeat;
-        background-image: url(./imgs/services/call-cs-bg.png);
+        /* background-image: url(./imgs/services/cl-cs-bg0.png); */
+        background-image: url(./imgs/services/banner/bannerbg.png);
     }
     #hero{
         min-height: 500px;
@@ -460,11 +490,8 @@ section{
     .nav-ul-ml{
         /* margin-left: 10% !important; */
     }
-    .flex-highlights{
-        display: flex;
-    }
     .highlights .li-block{
-        width: 33%;
+        margin-right: 10px;
     }
 }
 @media screen and (max-width: 959px) {
