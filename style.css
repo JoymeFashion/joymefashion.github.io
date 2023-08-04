@@ -10,6 +10,14 @@
 body{
     font-family: Georgia, serif;
 }
+.navbar-nav{
+    font-family: 'Poppins', sans-serif;
+}
+/* font family update  */
+.ad-title{
+    font-family: Georgia, serif;
+}
+/* end of font family update  */
 /* custom button  */
 .btn-primary{
     background-color: var(--primary-color) !important;
@@ -82,14 +90,18 @@ section{
  /* Styling for the submenu */
 .submenu {
     display: none;
-    position: absolute;
     background-color: var(--pr-bg-color);
     padding: 10px;
     min-width: 150px;
     list-style-type: none;
-    z-index: 1000;
+}
+.submenu li{
+    margin: 5px;
 }
 .submenu a{
+    color: #4a4a4b;
+}
+.submenu a:hover{
     color: black;
 }
 .submenu li:hover{

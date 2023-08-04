@@ -23,7 +23,16 @@
     .nav-ul-ml{
         margin: auto;
     }
-    
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: var(--pr-bg-color);
+        padding: 10px;
+        min-width: 150px;
+        list-style-type: none;
+        z-index: 1000;
+        border-radius: 10px;
+    }
 }
 @media screen and (min-width:768px) {   
     #introduction{
@@ -51,6 +60,11 @@
     
     .mb-50px{
         margin-bottom: 80px;
+    }
+}
+@media screen and (max-width:991.99px){
+    .submenu{
+        position: inherit !important;
     }
 }
  /* md or smaller screen  */
