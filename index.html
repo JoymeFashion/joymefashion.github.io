@@ -21,10 +21,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./js/float-panel.js"></script>
     <script src="./js/fydi.js"></script>
     <!-- Custom Styles (Embedded in the head) -->
@@ -132,7 +132,7 @@
       </nav>
     </header>
     <!-- message  -->
-    <div class="message-container" id="popupmessage">
+    <div class="message-container" id="bannermessage">
       <!-- Full-width message -->
       <div class="alert alert-primary alert-dismissible fade show text-center align-items-center justify-content-center pr-bg-section" role="alert">
         <strong>Hello there!</strong>
@@ -173,22 +173,26 @@
               <div class="flex-highlights  index-highlights mb-4">
                 <div class="li-block">
                   <div class="">
-                    4,000+ <span>Employees</span> 
+                    4,000+
+                    <span>Employees</span>
                   </div>
                 </div>
                 <div class="li-block">
                   <div class="">
-                    1,100+ <span>Clients </span>
+                    1,100+
+                    <span>Clients</span>
                   </div>
                 </div>
                 <div class="li-block">
                   <div class="">
-                    300+ <span>Positive Reviews </span>
+                    300+
+                    <span>Positive Reviews</span>
                   </div>
                 </div>
                 <div class="li-block">
                   <div class="">
-                    98.7% <span>Retention Rate</span>
+                    98.7%
+                    <span>Retention Rate</span>
                   </div>
                 </div>
               </div>
@@ -800,19 +804,20 @@
     <script>
     // collapse menu when click outside
     $(document).on('click', function (e) {
+      console.log($('.navbar-collapse').length);
       if ($(e.target).closest('.navbar').length === 0) {
-        $('.navbar-collapse').collapse('hide');
+        $('.navbar-collapse').collapse("hide");
       }
     });
     // close message 
-    const messageContainer = document.getElementById('message-container');
+    const messageContainer = document.getElementById('bannermessage');
     const closeButton = document.getElementById('close-button');
 
     closeButton.addEventListener('click', () => {
       messageContainer.style.display = 'none';
-    
     });
-    fix_message("popupmessage");
+    //fixed message
+    // fix_message("popupmessage");
     // pop up form 
     $(document).ready(function() {
     if(localStorage.getItem('popState') != 'shown'){
