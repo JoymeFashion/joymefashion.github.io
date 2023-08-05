@@ -804,7 +804,7 @@
     <script>
     // collapse menu when click outside
     $(document).on('click', function (e) {
-      console.log($('.navbar-collapse').length);
+      // console.log($('.navbar-collapse').length);
       if ($(e.target).closest('.navbar').length === 0) {
         $('.navbar-collapse').collapse("hide");
       }
@@ -826,7 +826,7 @@
     }
     else {
        // DELETE THIS ELSE ON PRODUCTION
-        console.log('once-popup is allready shown previously')
+        // console.log('once-popup is allready shown previously')
     }
 
     $('#popup-close').click(function(e) // You are clicking the close button
