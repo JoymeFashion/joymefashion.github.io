@@ -25,6 +25,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/sweetalert2.all.min.js"></script>
     <script src="./js/float-panel.js"></script>
     <script src="./js/fydi.js"></script>
     <!-- Custom Styles (Embedded in the head) -->
@@ -571,10 +572,10 @@
       </div>
     </div>
     <!-- END ONCE SHOWN MODAL -->
-    <!-- simple form  -->
+    <!-- simple contact form  -->
     <section id="contact-form" class="pr-bg-section">
       <div class="d-flex justify-content-center align-items-center mb-80px">
-        <h3>Let our expert give you a quote.</h3>
+        <h3>Let our experts give you a quote.</h3>
       </div>
       <div class="container">
         <form>
@@ -584,8 +585,9 @@
                 <label for="name">Name</label>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control cs-name"
                   id="name"
+                  required
                   placeholder="Enter your name"
                 >
               </div>
@@ -595,7 +597,7 @@
                 <label for="email">Email</label>
                 <input
                   type="email"
-                  class="form-control"
+                  class="form-control cs-email"
                   id="email"
                   placeholder="Enter your email"
                 >
@@ -605,8 +607,8 @@
               <div class="form-group">
                 <label for="phone">Phone</label>
                 <input
-                  type="text"
-                  class="form-control"
+                  type="number"
+                  class="form-control cs-phone"
                   id="phone"
                   placeholder="Enter your phone number"
                 >
@@ -616,7 +618,7 @@
               <div class="form-group">
                 <label for="message">Message</label>
                 <textarea
-                  class="form-control"
+                  class="form-control cs-message"
                   id="message"
                   rows="4"
                   placeholder="Enter your message"
@@ -624,7 +626,7 @@
               </div>
             </div>
             <div class="col-12 text-center">
-              <button type="submit" class="btn btn-secondary">Submit</button>
+              <button type="button" class="btn btn-secondary cs-submit" id="submit">Submit</button>
             </div>
           </div>
         </form>
@@ -660,8 +662,8 @@
                 <label for="name">Name</label>
                 <input
                   type="text"
-                  class="form-control"
-                  id="name"
+                  class="form-control cs-name"
+                  id="cs-name"
                   placeholder="Enter your name"
                 >
               </div>
@@ -669,21 +671,21 @@
                 <label for="email">Email address</label>
                 <input
                   type="email"
-                  class="form-control"
-                  id="email"
+                  class="form-control cs-email"
+                  id="cs-email"
                   placeholder="Enter email"
                 >
               </div>
               <div class="form-group">
                 <label for="email">Phone</label>
                 <input
-                  type="email"
-                  class="form-control"
-                  id="phone"
+                  type="number"
+                  class="form-control cs-phone"
+                  id="cs-phone"
                   placeholder="Enter Phone"
                 >
               </div>
-              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              <button type="button" class="btn btn-primary btn-block cs-submit">Submit</button>
             </form>
           </div>
         </div>
@@ -816,6 +818,7 @@
     closeButton.addEventListener('click', () => {
       messageContainer.style.display = 'none';
     });
+    validate_form("cs-submit");
     //fixed message
     // fix_message("popupmessage");
     // pop up form 
