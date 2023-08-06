@@ -461,7 +461,7 @@ section{
     position: absolute;
     right: 20px;
     top: -100px;
-    z-index: 9999;
+    z-index: 999;
 }
 .pr-bg-square{
     background-color: var(--primary-color);
