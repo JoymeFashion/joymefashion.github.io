@@ -24,6 +24,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/sweetalert2.all.min.js"></script>
+    <script src="../js/fydi.js"></script>
     <!-- Custom Styles (Embedded in the head) -->
     <style></style>
   </head>
@@ -151,16 +153,15 @@
               </button>
             </div>
             <!-- left bottom corner  -->
-            <div class="left-bt-corner d-none d-sm-none d-md-block">
-             
-            </div>
+            <div class="left-bt-corner d-none d-sm-none d-md-block"></div>
           </div>
           <!-- Right Side Div -->
           <div class="col-md-4 d-md-block d-none mt-5">
             <img src="../imgs/services/call-center.png" alt="FYDI Call Center Service" class="img-fluid">
             <!-- right top corner  -->
             <div class="right-corner pr-bg-square d-flex align-items-center justify-content-center text-center">
-              24/7/365 <br>
+              24/7/365
+              <br>
               10 Operating Centers
             </div>
           </div>
@@ -255,43 +256,43 @@
         </div>
       </div>
     </section>
-    <!-- simple form  -->
+    <!-- simple contact form  -->
     <section id="contact-form" class="pr-bg-section">
-      <div class="d-flex justify-content-center align-items-center">
-        <h3>Let's talk.</h3>
+      <div class="d-flex justify-content-center align-items-center mb-80px">
+        <h3>Let our experts give you a quote.</h3>
       </div>
       <div class="container">
-        <p class="text-center">Thank you for your interest in our services. We look forward to connecting with you.</p>
         <form>
           <div class="row">
-            <div class="col-lg-4 col-md-3 col-sm-12">
+            <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control cs-name"
                   id="name"
+                  required
                   placeholder="Enter your name"
                 >
               </div>
             </div>
-            <div class="col-lg-4 col-md-3 col-sm-12">
+            <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="form-group">
                 <label for="email">Email</label>
                 <input
                   type="email"
-                  class="form-control"
+                  class="form-control cs-email"
                   id="email"
                   placeholder="Enter your email"
                 >
               </div>
             </div>
-            <div class="col-lg-4 col-md-3 col-sm-12">
+            <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="form-group">
                 <label for="phone">Phone</label>
                 <input
-                  type="text"
-                  class="form-control"
+                  type="number"
+                  class="form-control cs-phone"
                   id="phone"
                   placeholder="Enter your phone number"
                 >
@@ -301,7 +302,7 @@
               <div class="form-group">
                 <label for="message">Message</label>
                 <textarea
-                  class="form-control"
+                  class="form-control cs-message"
                   id="message"
                   rows="4"
                   placeholder="Enter your message"
@@ -309,7 +310,7 @@
               </div>
             </div>
             <div class="col-12 text-center">
-              <button type="submit" class="btn btn-secondary">Submit</button>
+              <button type="button" class="btn btn-secondary cs-submit" id="submit">Submit</button>
             </div>
           </div>
         </form>
@@ -327,7 +328,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="demoModalLabel">Request Quote</h5>
+            <h5 class="modal-title" id="demoModalLabel">Free Quote/Quote</h5>
             <button
               type="button"
               class="close"
@@ -345,8 +346,8 @@
                 <label for="name">Name</label>
                 <input
                   type="text"
-                  class="form-control"
-                  id="name"
+                  class="form-control cs-name"
+                  id="cs-name"
                   placeholder="Enter your name"
                 >
               </div>
@@ -354,21 +355,21 @@
                 <label for="email">Email address</label>
                 <input
                   type="email"
-                  class="form-control"
-                  id="email"
+                  class="form-control cs-email"
+                  id="cs-email"
                   placeholder="Enter email"
                 >
               </div>
               <div class="form-group">
                 <label for="email">Phone</label>
                 <input
-                  type="email"
-                  class="form-control"
-                  id="phone"
+                  type="number"
+                  class="form-control cs-phone"
+                  id="cs-phone"
                   placeholder="Enter Phone"
                 >
               </div>
-              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              <button type="button" class="btn btn-primary btn-block cs-submit">Submit</button>
             </form>
           </div>
         </div>
@@ -507,6 +508,8 @@
         $('.navbar-collapse').collapse('hide');
       }
     });
+    //bind submit function 
+    validate_form("cs-submit");
     </script>
   </body>
 </html>
