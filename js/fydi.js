@@ -36,7 +36,7 @@ var validate_form = function (ele) {
       if (phone == "") {
         alert_msg += "Phone ";
       }
-      if ($(contact_form).find(".cs-message").length>0) {
+      if ($(contact_form).find(".cs-message").length > 0) {
         message = $(contact_form).find(".cs-message").val();
       } else {
         message = "";
@@ -57,7 +57,50 @@ var validate_form = function (ele) {
         }
         console.log(info);
         // submit info to backend..
+        // has message => go to contact us
+        if ($(contact_form).find(".cs-message").length > 0) {
+          send_to_api("https://us.admin.fydiglobal.com/api/userContactUs/add", info);
+        }
+        //no message => go to free quote
+        else {
+          send_to_api("https://us.admin.fydiglobal.com/api/freeQuote/add", info);
+        }
       }
     });
+  });
+}
+// POST front end data to api
+/*
+  parameter: url_: type: string (api url)
+             data: type: json 
+*/
+var send_to_api = function (url_, data_) {
+  $.ajax({
+    url: url_,
+    type: "POST",
+    dataType: 'JSON',
+    data: data_,
+    success: function (res) {
+      if (res.code == 0) {
+        Swal.fire({
+          title: 'Success',
+          text: 'Your inquiry has been sent to us. Thanks!',
+          icon: 'success',
+          showCancelButton: false,
+          confirmButtonColor: '#3085d6',
+        }).then((result) => {
+          window.location.reload();
+        });
+      }
+    },
+    error: function(xhr, textStatus, errorThrown){
+      Swal.fire({
+        title: 'Error Occured',
+        text: 'Oops, something went wrong, please try again later or call us. Sorry',
+        icon: 'error',
+        showCancelButton: false,
+        confirmButtonColor: '#3085d6',
+      });
+    }
   });
 }
