@@ -106,9 +106,6 @@
                 <li>
                   <a href="https://zh.fydiglobal.com/">中文</a>
                 </li>
-                <li>
-                  Español
-                </li>
               </ul>
             </li>
             <li class="nav-item">
@@ -558,7 +555,7 @@
                 <div class="col-12">
                   <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="text" class="form-control cs-phone" placeholder="Enter your email">
+                    <input type="text" class="form-control cs-phone" placeholder="Enter your phone">
                   </div>
                 </div>
                 <div class="col-12">
@@ -851,24 +848,17 @@
         var now = new Date();
         now.setTime(now.getTime() + 24 * 3600 * 1000);
         var cookie_str = "expires=" + now.toUTCString() + ";path=/;Secure";
-        console.log(cookie_str);
+        // console.log(cookie_str);
         document.cookie = cookie_str;
-        console.log("set cookie to expire in 1 day.");
-        console.log(document.cookie);
-    }
-    else {
-       // DELETE THIS ELSE ON PRODUCTION
-        console.log(document.cookie);
+        // console.log("set cookie to expire in 1 day.");
+        // console.log(document.cookie);
     }
 
     $('#popup-close').click(function(e) // You are clicking the close button
     {
-    $('#once-popup').fadeOut(); // Now the pop up is hiden.
+      $('#once-popup').fadeOut(); // Now the pop up is hiden.
     });
-    // $('#once-popup').click(function(e) 
-    // {
-    // $('#once-popup').fadeOut(); 
-    // });
+
 });
     </script>
     <!-- Start of LiveChat (www.livechat.com) code -->
