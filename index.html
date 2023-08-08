@@ -21,8 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./js/sweetalert2.all.min.js"></script>
@@ -540,30 +540,35 @@
             <div class="col-lg-5 col-sm-12">
               <p style="text-align: left;">
                 If you are still searching around for a BPO/outsourcing company,
-                we are the right one.
+                we are here to help.
               </p>
               <div class="row">
                 <div class="col-12">
                   <div class="form-group">
                     <label for="name">Name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="username"
-                      placeholder="Enter your name"
-                    >
+                    <input type="text" class="form-control cs-name" placeholder="Enter your name">
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="form-group">
-                    <label for="name">Email</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="userEmail"
-                      placeholder="Enter your email"
-                    >
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control cs-email" placeholder="Enter your email">
                   </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="form-control cs-phone" placeholder="Enter your email">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="name">Message</label>
+                    <textarea class="form-control cs-message" rows="4" placeholder="Enter your message"></textarea>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="button" class="btn btn-secondary cs-submit">Submit</button>
                 </div>
               </div>
             </div>
@@ -575,7 +580,8 @@
     <!-- simple contact form  -->
     <section id="contact-form" class="pr-bg-section">
       <div class="d-flex justify-content-center align-items-center text-center mb-80px">
-        <h3>Message us for your inquiries.
+        <h3>
+          Message us for your inquiries.
           <br>
           We will get back to you within 24 hours.
         </h3>
@@ -620,12 +626,7 @@
             <div class="col-lg-12">
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea
-                  class="form-control cs-message"
-                  id="message"
-                  rows="4"
-                  placeholder="Enter your message"
-                ></textarea>
+                <textarea class="form-control cs-message" rows="4" placeholder="Enter your message"></textarea>
               </div>
             </div>
             <div class="col-12 text-center">
@@ -680,13 +681,17 @@
                 >
               </div>
               <div class="form-group">
-                <label for="email">Phone</label>
+                <label for="phone">Phone</label>
                 <input
                   type="number"
                   class="form-control cs-phone"
                   id="cs-phone"
                   placeholder="Enter Phone"
                 >
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control cs-message" rows="4" placeholder="Enter your message"></textarea>
               </div>
               <button type="button" class="btn btn-primary btn-block cs-submit">Submit</button>
             </form>
@@ -826,34 +831,54 @@
     // fix_message("popupmessage");
     // pop up form 
     $(document).ready(function() {
-    if(localStorage.getItem('popState') != 'shown'){
-        $("#once-popup").delay(2000).fadeIn();
-        localStorage.setItem('popState','shown')
+      var show_popup = false;
+      var expire_date = "";
+      console.log(document.cookie);
+      document.cookie.split(';').forEach(function(el) {
+          let [key,value] = el.split('=');
+          if(key=="expires"){
+            expire_date = Date(value);
+            console.log(expire_date);
+            if(expire_date<new Date()){
+              show_popup = true;
+            }
+          }
+        });
+    // first time visit or cookie expired => show pop up 
+    if(show_popup || expire_date == ""){
+        $("#once-popup").delay(4000).fadeIn(300);
+        // cookie expired in 1 day
+        var now = new Date();
+        now.setTime(now.getTime() + 24 * 3600 * 1000);
+        var cookie_str = "expires=" + now.toUTCString() + ";path=/;Secure";
+        console.log(cookie_str);
+        document.cookie = cookie_str;
+        console.log("set cookie to expire in 1 day.");
+        console.log(document.cookie);
     }
     else {
        // DELETE THIS ELSE ON PRODUCTION
-        // console.log('once-popup is allready shown previously')
+        console.log(document.cookie);
     }
 
     $('#popup-close').click(function(e) // You are clicking the close button
     {
     $('#once-popup').fadeOut(); // Now the pop up is hiden.
     });
-    $('#once-popup').click(function(e) 
-    {
-    $('#once-popup').fadeOut(); 
-    });
+    // $('#once-popup').click(function(e) 
+    // {
+    // $('#once-popup').fadeOut(); 
+    // });
 });
     </script>
-    <!-- live chat embed  -->
     <!-- Start of LiveChat (www.livechat.com) code -->
     <script>
       window.__lc = window.__lc || {};
-      window.__lc.license = 15761178;
+      window.__lc.license = 15856389;
       ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
     </script>
     <noscript>
-      <a href="https://www.livechat.com/chat-with/15761178/" rel="nofollow">Chat with us</a>
+      <a href="https://www.livechat.com/chat-with/15856389/" rel="nofollow">Chat with us</a>
       , powered by
       <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
     </noscript>
