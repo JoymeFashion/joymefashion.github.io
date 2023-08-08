@@ -434,7 +434,8 @@ section{
     left: 0;
     background: rgba(0, 0, 0, 0.65);
     text-align: center;
-    z-index: 10000;
+     /* should be below the sweet alert  */
+    z-index: 800;
 }
 #once-popup .inner {
     background: var(--secondary-color);
