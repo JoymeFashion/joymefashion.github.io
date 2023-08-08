@@ -467,12 +467,13 @@
     </noscript>
     <!-- End of LiveChat code -->
     <script>
-    // collapse menu when click outside
-    $(document).on('click', function (e) {
-      if ($(e.target).closest('.navbar').length === 0) {
-        $('.navbar-collapse').collapse('hide');
-      }
-    });
+      // collapse menu when click outside
+      $(document).on('click', function (e) {
+        if ($(e.target).closest('.navbar').length === 0) {
+          $('.navbar-collapse').collapse('hide');
+        }
+      });
+      validate_form("cs-submit");
     </script>
   </body>
 </html>
