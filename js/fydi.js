@@ -36,11 +36,7 @@ var validate_form = function (ele) {
       if (phone == "") {
         alert_msg += "Phone ";
       }
-      if ($(contact_form).find(".cs-message").length > 0) {
-        message = $(contact_form).find(".cs-message").val();
-      } else {
-        message = "";
-      }
+      message = $(contact_form).find(".cs-message").val();
       if (alert_msg != "") {
         Swal.fire({
           title: 'Error!',
@@ -50,29 +46,23 @@ var validate_form = function (ele) {
         });
       } else {
         info = {
-          "name": name,
+          "userName": name,
           "email": email,
-          "phone": phone,
+          "phoneNumber": phone,
           "message": message
         }
-        console.log(info);
+        // console.log(info);
         // submit info to backend..
-        // has message => go to contact us
-        if ($(contact_form).find(".cs-message").length > 0) {
-          send_to_api("https://us.admin.fydiglobal.com/api/userContactUs/add", info);
-        }
-        //no message => go to free quote
-        else {
-          send_to_api("https://us.admin.fydiglobal.com/api/freeQuote/add", info);
-        }
+        send_to_api("https://us.admin.fydiglobal.com/api/userContactUs/add", info);
       }
     });
   });
 }
 // POST front end data to api
 /*
-  parameter: url_: type: string (api url)
-             data: type: json 
+  parameter: 
+    url_: type: string (api url)
+    data: type: json 
 */
 var send_to_api = function (url_, data_) {
   $.ajax({
