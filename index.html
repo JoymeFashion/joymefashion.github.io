@@ -830,20 +830,20 @@
     $(document).ready(function() {
       var show_popup = false;
       var expire_date = "";
-      console.log(document.cookie);
+      // console.log(document.cookie);
       document.cookie.split(';').forEach(function(el) {
           let [key,value] = el.split('=');
           if(key.trim()=="expires"){
             expire_date = Date(value);
-            console.log(expire_date);
-            console.log(expire_date, " ", new Date(),expire_date<new Date());
+            // console.log(expire_date);
+            // console.log(expire_date, " ", new Date(),expire_date<new Date());
             if(expire_date<new Date()){
               show_popup = true;
             }
           }
         });
     // first time visit or cookie expired => show pop up 
-    if(show_popup || expire_date == ""){
+    if(expire_date == "" || show_popup){
         $("#once-popup").delay(4000).fadeIn(300);
         // cookie expired in 1 day
         var now = new Date();
@@ -851,7 +851,7 @@
         var cookie_str = "expires=" + now.toUTCString() + ";path=/;Secure";
         // console.log(cookie_str);
         document.cookie = cookie_str;
-        // console.log("set cookie to expire in 1 day.");
+        console.log("set cookie to expire in 1 day.");
         // console.log(document.cookie);
     }
 
