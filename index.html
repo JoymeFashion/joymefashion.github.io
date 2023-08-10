@@ -833,9 +833,10 @@
       console.log(document.cookie);
       document.cookie.split(';').forEach(function(el) {
           let [key,value] = el.split('=');
-          if(key=="expires"){
+          if(key.trim()=="expires"){
             expire_date = Date(value);
             console.log(expire_date);
+            console.log(expire_date, " ", new Date());
             if(expire_date<new Date()){
               show_popup = true;
             }
