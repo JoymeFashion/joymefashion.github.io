@@ -836,7 +836,7 @@
           if(key.trim()=="expires"){
             expire_date = Date(value);
             console.log(expire_date);
-            console.log(expire_date, " ", new Date());
+            console.log(expire_date, " ", new Date(),expire_date<new Date());
             if(expire_date<new Date()){
               show_popup = true;
             }
